@@ -3,7 +3,7 @@
 Code and data for the paper
 
 > **From Sensor Node to GPU Server: Speed, Energy and Timing Leakage of the Eight NIST Round-3 Post-Quantum Signatures Across the IoT Hierarchy**
-> Sohel Rana and M. Rubaiyat Hossain Mondal. Submitted to *IEEE Internet of Things Journal*.
+> Sohel Rana and M. Rubaiyat Hossain Mondal.
 
 The repository measures the eight NIST Round-3 additional signature candidates (FAEST, MQOM, SDitH, UOV, MAYO, QR-UOV, SNOVA, SQIsign) and six deployed baselines (ML-DSA-44, FN-DSA-512, SLH-DSA-SHA2-128s and -128f, Ed25519, ECDSA P-256) on five platforms:
 
