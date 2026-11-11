@@ -1,0 +1,7 @@
+build/
+__pycache__/
+*.pyc
+paper/tables/
+paper/figures/
+*.log
+.DS_Store

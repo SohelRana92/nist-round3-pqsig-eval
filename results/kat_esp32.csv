@@ -1,0 +1,70 @@
+recipe,scheme,param,variant,platform,method,status,detail
+ecdsa-p256-ref,ECDSA,P-256,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+ed25519-ref,Ed25519,Ed25519,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+faest-faest_128f-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+faest-faest_128s-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+faest-faest_em_128f-ref,FAEST,faest_em_128f,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+faest-faest_em_128s-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+fndsa-512-ref,FN-DSA,FN-DSA-512,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+mayo-MAYO_1-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+mayo-MAYO_2-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+mldsa-44-ref,ML-DSA,ML-DSA-44,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+mqom-cat1_gf16_fast_ct-ref,MQOM,cat1_gf16_fast_ct,ref,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+mqom-cat1_gf16_fast_ot-ref,MQOM,cat1_gf16_fast_ot,ref,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+mqom-cat1_gf16_short_ct-ref,MQOM,cat1_gf16_short_ct,ref,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+mqom-cat1_gf16_short_ot-ref,MQOM,cat1_gf16_short_ot,ref,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+mqom-cat1_gf2_shorter_ct-ref,MQOM,cat1_gf2_shorter_ct,ref,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+mqom-cat1_gf2_shorter_ot-ref,MQOM,cat1_gf2_shorter_ot,ref,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+qruov-1q127L10-aes-opt-portable,QR-UOV,1q127L10-aes,opt-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L10-aes-ref-portable,QR-UOV,1q127L10-aes,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L10-shake-opt-portable,QR-UOV,1q127L10-shake,opt-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L10-shake-ref-portable,QR-UOV,1q127L10-shake,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L3-aes-opt-portable,QR-UOV,1q127L3-aes,opt-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L3-aes-ref-portable,QR-UOV,1q127L3-aes,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L3-shake-opt-portable,QR-UOV,1q127L3-shake,opt-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q127L3-shake-ref-portable,QR-UOV,1q127L3-shake,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q31L10-aes-opt-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+qruov-1q31L10-aes-ref-portable,QR-UOV,1q31L10-aes,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q31L10-shake-opt-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+qruov-1q31L10-shake-ref-portable,QR-UOV,1q31L10-shake,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q31L3-aes-opt-portable,QR-UOV,1q31L3-aes,opt-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q31L3-aes-ref-portable,QR-UOV,1q31L3-aes,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q31L3-shake-opt-portable,QR-UOV,1q31L3-shake,opt-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q31L3-shake-ref-portable,QR-UOV,1q31L3-shake,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q7L10-aes-opt-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+qruov-1q7L10-aes-ref-portable,QR-UOV,1q7L10-aes,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+qruov-1q7L10-shake-opt-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+qruov-1q7L10-shake-ref-portable,QR-UOV,1q7L10-shake,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+slhdsa-sha2-128f-ref,SLH-DSA,SLH-DSA-SHA2-128f,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+slhdsa-sha2-128s-ref,SLH-DSA,SLH-DSA-SHA2-128s,ref,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_B-mem,SNOVA,SNOVA_I_B,mem,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_B-opt,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_B-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_B-tiny,SNOVA,SNOVA_I_B,tiny,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_B_AES-mem,SNOVA,SNOVA_I_B_AES,mem,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_B_AES-opt,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_B_AES-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_B_AES-tiny,SNOVA,SNOVA_I_B_AES,tiny,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_K-mem,SNOVA,SNOVA_I_K,mem,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_K-opt,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_K-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_K-tiny,SNOVA,SNOVA_I_K,tiny,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_K_AES-mem,SNOVA,SNOVA_I_K_AES,mem,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_K_AES-opt,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_K_AES-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_K_AES-tiny,SNOVA,SNOVA_I_K_AES,tiny,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_S-mem,SNOVA,SNOVA_I_S,mem,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_S-opt,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_S-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_S-tiny,SNOVA,SNOVA_I_S,tiny,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_S_AES-mem,SNOVA,SNOVA_I_S_AES,mem,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+snova-SNOVA_I_S_AES-opt,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_S_AES-ref,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+snova-SNOVA_I_S_AES-tiny,SNOVA,SNOVA_I_S_AES,tiny,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+sqisign-p324_3-ref-portable,SQIsign,p324_3,ref-portable,esp32,compare_x86_reference,PASS,3 vectors match the x86-64 reference
+uov-Ip-ref-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+uov-Ip_pkc-ref-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+uov-Ip_pkc_skc-ref-portable,UOV,Ip_pkc_skc,ref-portable,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0
+uov-Is-ref-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+uov-Is_pkc-ref-portable,,,,esp32,compare_x86_reference,FAIL,no KAT rows in the ESP32 output (crash or not run)
+uov-Is_pkc_skc-ref-portable,UOV,Is_pkc_skc,ref-portable,esp32,compare_x86_reference,FAIL,3 vectors differ from the x86-64 reference; first difference at vector 0

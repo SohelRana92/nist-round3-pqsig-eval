@@ -1,0 +1,32 @@
+GPU_BUILD,FAEST,faest_em_128s,ref,registers,255,stack_bound,9360,stack_dynamic,0,mutable_globals,-
+GPU_INFO,FAEST,faest_em_128s,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,9360,tpb,128,stack_limit,10384,heap_mb,4096,chunk,0,mem_free_mb,14572,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,1,0,17081130859,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,1,1,17076451172,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,1,2,17072345703,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,1,3,17071998047,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,1,4,17071617188,0.1,1
+GPU_XFER,FAEST,faest_em_128s,ref,shared,1,17312,18464,3576
+NOTE,reps_reduced,FAEST,faest_em_128s,ref,shared,64,reps,2,predicted_s_per_run,640
+GPU_INFO,FAEST,faest_em_128s,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,9360,tpb,128,stack_limit,10384,heap_mb,4096,chunk,0,mem_free_mb,14572,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,64,0,184157546875,0.3,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,shared,128,64,1,184161593750,0.3,1
+GPU_XFER,FAEST,faest_em_128s,ref,shared,64,45632,30720,226848
+SKIP,time_budget,FAEST,faest_em_128s,ref,shared,1024,predicted_s_per_run,3413
+GPU_INFO,FAEST,faest_em_128s,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,9360,tpb,128,stack_limit,10384,heap_mb,4096,chunk,0,mem_free_mb,14576,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,1,0,17071662109,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,1,1,17071349609,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,1,2,17071951172,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,1,3,17071802734,0.1,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,1,4,17071761719,0.1,1
+GPU_XFER,FAEST,faest_em_128s,ref,distinct,1,17024,17792,3576
+NOTE,reps_reduced,FAEST,faest_em_128s,ref,distinct,64,reps,2,predicted_s_per_run,640
+GPU_INFO,FAEST,faest_em_128s,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,9360,tpb,128,stack_limit,10384,heap_mb,4096,chunk,0,mem_free_mb,14576,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,64,0,206357343750,0.3,1
+BATCH,FAEST,faest_em_128s,ref,gpu,gpu,distinct,128,64,1,206312687500,0.3,1
+GPU_XFER,FAEST,faest_em_128s,ref,distinct,64,48608,29088,228864
+SKIP,time_budget,FAEST,faest_em_128s,ref,distinct,1024,predicted_s_per_run,3413
+GPU_DONE,FAEST,faest_em_128s,ref

@@ -1,0 +1,168 @@
+zip,file,status
+FAEST_round3.zip,nist_submission_round3/KAT/faest_128f/PQCsignKAT_faest_128f.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_128s/PQCsignKAT_faest_128s.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_192f/PQCsignKAT_faest_192f.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_192s/PQCsignKAT_faest_192s.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_256f/PQCsignKAT_faest_256f.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_256s/PQCsignKAT_faest_256s.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_em_128f/PQCsignKAT_faest_em_128f.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_em_128s/PQCsignKAT_faest_em_128s.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_em_192f/PQCsignKAT_faest_em_192f.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_em_192s/PQCsignKAT_faest_em_192s.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_em_256f/PQCsignKAT_faest_em_256f.rsp,identical
+FAEST_round3.zip,nist_submission_round3/KAT/faest_em_256s/PQCsignKAT_faest_em_256s.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/AVX2/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/AVX2/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/AVX2/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/AVX2/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/GFNI/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/GFNI/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/GFNI/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/GFNI/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/NEON/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/NEON/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/NEON/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/NEON/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/sage/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/sage/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/sage/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/Additional_Implementations/sage/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+MAYO.zip,MAYO/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+MAYO.zip,MAYO/Optimized_Implementation/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/Optimized_Implementation/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/Optimized_Implementation/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/Optimized_Implementation/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+MAYO.zip,MAYO/Reference_Implementation/KAT/PQCsignKAT_24_MAYO_1.rsp,identical
+MAYO.zip,MAYO/Reference_Implementation/KAT/PQCsignKAT_24_MAYO_2.rsp,identical
+MAYO.zip,MAYO/Reference_Implementation/KAT/PQCsignKAT_32_MAYO_3.rsp,identical
+MAYO.zip,MAYO/Reference_Implementation/KAT/PQCsignKAT_40_MAYO_5.rsp,identical
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/1q127L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/1q127L3-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/1q31L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/1q31L3-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/1q7L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/3q127L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/3q127L3-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/3q31L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/3q31L3-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/3q7L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/5q127L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/5q127L3-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/5q31L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/5q31L3-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_aes.zip_x/kat_aes/5q7L10-aes/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/1q127L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/1q127L3-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/1q31L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/1q31L3-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/1q7L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/3q127L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/3q127L3-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/3q31L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/3q31L3-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/3q7L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/5q127L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/5q127L3-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/5q31L10-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/5q31L3-shake/PQCsignKAT_32.rsp,digest_ok
+QR_UOV-Round3-KAT.zip,KAT/kat_shake.zip_x/kat_shake/5q7L10-shake/PQCsignKAT_32.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_III_B/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_III_B_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_III_K/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_III_K_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_III_S/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_III_S_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_I_B/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_I_B_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_I_K/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_I_K_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_I_S/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_I_S_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_V_B/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_V_B_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_V_K/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_V_K_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_V_S/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/AVX2/SNOVA_V_S_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_III_B/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_III_B_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_III_K/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_III_K_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_III_S/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_III_S_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_I_B/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_I_B_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_I_K/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_I_K_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_I_S/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_I_S_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_V_B/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_V_B_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_V_K/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_V_K_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_V_S/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/Additional_Implementations/GFNI/SNOVA_V_S_AES/ref_kat/KAT_DIGESTS.sha256 (0/18 digests found),differs
+SNOVA_Round3.zip,SNOVA_Round3/KAT/Round2/PQCsignKAT_SNOVA_24_5_4_SHAKE_SSK.rsp,differs
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_III_B/PQCsignKAT_SNOVA_III_B.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_III_B_AES/PQCsignKAT_SNOVA_III_B_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_III_K/PQCsignKAT_SNOVA_III_K.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_III_K_AES/PQCsignKAT_SNOVA_III_K_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_III_S/PQCsignKAT_SNOVA_III_S.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_III_S_AES/PQCsignKAT_SNOVA_III_S_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_I_B/PQCsignKAT_SNOVA_I_B.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_I_B_AES/PQCsignKAT_SNOVA_I_B_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_I_K/PQCsignKAT_SNOVA_I_K.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_I_K_AES/PQCsignKAT_SNOVA_I_K_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_I_S/PQCsignKAT_SNOVA_I_S.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_I_S_AES/PQCsignKAT_SNOVA_I_S_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_V_B/PQCsignKAT_SNOVA_V_B.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_V_B_AES/PQCsignKAT_SNOVA_V_B_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_V_K/PQCsignKAT_SNOVA_V_K.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_V_K_AES/PQCsignKAT_SNOVA_V_K_AES.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_V_S/PQCsignKAT_SNOVA_V_S.rsp,digest_ok
+SNOVA_Round3.zip,SNOVA_Round3/KAT/SNOVA_V_S_AES/PQCsignKAT_SNOVA_V_S_AES.rsp,digest_ok
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat1_gf16_fast_ct/PQCsignKAT_96.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat1_gf16_fast_ot/PQCsignKAT_96.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat1_gf16_short_ct/PQCsignKAT_96.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat1_gf16_short_ot/PQCsignKAT_96.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat1_gf2_shorter_ct/PQCsignKAT_72.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat1_gf2_shorter_ot/PQCsignKAT_72.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat3_gf16_fast_ct/PQCsignKAT_144.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat3_gf16_fast_ot/PQCsignKAT_144.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat3_gf16_short_ct/PQCsignKAT_144.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat3_gf16_short_ot/PQCsignKAT_144.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat3_gf2_shorter_ct/PQCsignKAT_108.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat3_gf2_shorter_ot/PQCsignKAT_108.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat5_gf16_fast_ct/PQCsignKAT_192.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat5_gf16_fast_ot/PQCsignKAT_192.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat5_gf16_short_ct/PQCsignKAT_192.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat5_gf16_short_ot/PQCsignKAT_192.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat5_gf2_shorter_ct/PQCsignKAT_144.rsp,identical
+mqom3_submission_package.zip,submission_package_v3/KAT/mqom3_cat5_gf2_shorter_ot/PQCsignKAT_144.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat1_fast/PQCsignKAT_147.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat1_fast_cipherpow/PQCsignKAT_147.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat1_short/PQCsignKAT_147.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat1_short_cipherpow/PQCsignKAT_147.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat3_fast/PQCsignKAT_208.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat3_fast_cipherpow/PQCsignKAT_208.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat3_short/PQCsignKAT_208.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat3_short_cipherpow/PQCsignKAT_208.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat5_fast/PQCsignKAT_275.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat5_fast_cipherpow/PQCsignKAT_275.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat5_short/PQCsignKAT_275.rsp,identical
+sdith3_submission_package.zip,submission_package/KAT/sdith_cat5_short_cipherpow/PQCsignKAT_275.rsp,identical
+sqisign.zip,SQIsign/Additional_Implementations/arm64/KAT/PQCsignKAT_270_SQIsign_p324_3.rsp,identical
+sqisign.zip,SQIsign/Additional_Implementations/arm64/KAT/PQCsignKAT_417_SQIsign_p500_27.rsp,identical
+sqisign.zip,SQIsign/Additional_Implementations/arm64/KAT/PQCsignKAT_549_SQIsign_p664_17.rsp,identical
+sqisign.zip,SQIsign/Additional_Implementations/broadwell/KAT/PQCsignKAT_270_SQIsign_p324_3.rsp,identical
+sqisign.zip,SQIsign/Additional_Implementations/broadwell/KAT/PQCsignKAT_417_SQIsign_p500_27.rsp,identical
+sqisign.zip,SQIsign/Additional_Implementations/broadwell/KAT/PQCsignKAT_549_SQIsign_p664_17.rsp,identical
+sqisign.zip,SQIsign/KAT/PQCsignKAT_270_SQIsign_p324_3.rsp,identical
+sqisign.zip,SQIsign/KAT/PQCsignKAT_417_SQIsign_p500_27.rsp,identical
+sqisign.zip,SQIsign/KAT/PQCsignKAT_549_SQIsign_p664_17.rsp,identical
+sqisign.zip,SQIsign/Reference_Implementation/KAT/PQCsignKAT_270_SQIsign_p324_3.rsp,identical
+sqisign.zip,SQIsign/Reference_Implementation/KAT/PQCsignKAT_417_SQIsign_p500_27.rsp,identical
+sqisign.zip,SQIsign/Reference_Implementation/KAT/PQCsignKAT_549_SQIsign_p664_17.rsp,identical

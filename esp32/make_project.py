@@ -1,0 +1,216 @@
+#!/usr/bin/env python3
+"""make_project.py - turn one recipe into a ready-to-flash ESP-IDF project.
+
+Usage:
+  esp32/make_project.py --recipe mayo-MAYO_1-ref --out ~/esp/mayo1
+  esp32/make_project.py --recipe uov-Ip-ref-portable --out ~/esp/uov --plan "sizes;kat 3;stack;speed 1000 10"
+  esp32/make_project.py --recipe uov-Ip-ref-portable --out ~/esp/uov-e --plan "energy sign 10 5"
+  then:  cd OUT && idf.py set-target esp32 && idf.py build flash
+         tools/esp32_capture.py --port /dev/ttyUSB0 --out results/esp32_mayo1.csv
+
+--plan is a ';'-separated list of harness commands. They run in order on
+core 1, in one FreeRTOS task with --task-stack bytes of stack. The board
+prints DONE at the end.
+"""
+import argparse
+import json
+import os
+import shutil
+import subprocess
+import sys
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+TOP = os.path.dirname(HERE)
+H = os.path.join(TOP, "harness")
+
+
+def cstr(s):
+    return '"' + s.replace("\\", "\\\\").replace('"', '\\"') + '"'
+
+
+def auto_stack(recipe):
+    """Peak stack of the recipe on a 32-bit x86 build (same pointer width
+    as the ESP32), plus 25% and 16 KiB for the ESP32's register-window
+    spill areas and the harness itself."""
+    bench = os.path.join(TOP, "build", "x86-32", recipe, "bench")
+    if not os.path.exists(bench):
+        subprocess.run([sys.executable, os.path.join(TOP, "tools", "hbuild.py"), "--recipe", recipe,
+                        "--platform", "x86-32"], capture_output=True)
+    if not os.path.exists(bench):
+        return 96 * 1024
+    r = subprocess.run([bench, "stack"], capture_output=True, text=True)
+    peaks = [int(l.split(",")[6]) for l in r.stdout.splitlines() if l.startswith("STACK,")]
+    if not peaks:
+        return 96 * 1024
+    need = int(max(peaks) * 1.25) + 16 * 1024
+    return max(32 * 1024, (need + 4095) // 4096 * 4096)
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--recipe", required=True)
+    ap.add_argument("--out", required=True)
+    ap.add_argument("--plan", default="sizes;kat 3;stack;speed 1000 10")
+    ap.add_argument("--task-stack", default="auto",
+                    help="bytes of stack for the benchmark task, or 'auto': the peak "
+                         "measured on the 32-bit x86 build of the same recipe, plus 25%% and "
+                         "16 KiB, rounded up to 4 KiB (96 KiB when no 32-bit build is possible)")
+    ap.add_argument("--marker-gpio", type=int, default=4)
+    ap.add_argument("--set", action="append", default=[])
+    a = ap.parse_args()
+    a.task_stack = auto_stack(a.recipe) if a.task_stack == "auto" else int(a.task_stack)
+    print("benchmark task stack: %d bytes" % a.task_stack)
+
+    cmd = [sys.executable, os.path.join(TOP, "tools", "hbuild.py"), "--recipe", a.recipe,
+           "--platform", "esp32"]
+    for s in a.set:
+        cmd += ["--set", s]
+    if subprocess.run(cmd).returncode != 0:
+        sys.exit("staging failed")
+    man = json.load(open(os.path.join(TOP, "build", "esp32", a.recipe, "manifest.json")))
+
+    out = os.path.abspath(os.path.expanduser(a.out))
+    if os.path.exists(out):
+        shutil.rmtree(out)
+    comp = os.path.join(out, "components", "scheme")
+    main_dir = os.path.join(out, "main")
+    os.makedirs(comp)
+    os.makedirs(main_dir)
+
+    # Copy the staged scheme tree so the project is self-contained.
+    stage = os.path.join(TOP, "build", "esp32", a.recipe)
+    shutil.copytree(stage, os.path.join(comp, "stage"))
+    rel = lambda p: os.path.relpath(p.replace(stage, os.path.join(comp, "stage")), comp)
+    srcs = [rel(s) if s.startswith(stage) else s for s in man["sources"]]
+    incs = [rel(d) if d.startswith(stage) else d for d in man["include_dirs"]]
+
+    # Harness files are copied too, so the project builds on any machine.
+    hcopy = os.path.join(comp, "harness")
+    shutil.copytree(H, hcopy)
+    def hrel(p):
+        return os.path.relpath(p.replace(H, hcopy), comp) if p.startswith(H) else p
+    srcs += [hrel(s) for s in man["harness_sources"]]
+    incs = [hrel(d) for d in incs]
+    # Anything still outside the project (extra include dirs of a recipe)
+    # is copied under components/scheme/ext/ so the project is self-contained.
+    ext = os.path.join(comp, "ext")
+    def localise(p, is_dir):
+        if not os.path.isabs(p):
+            return p
+        dst = os.path.join(ext, "%02d_%s" % (len(os.listdir(ext)) if os.path.isdir(ext) else 0,
+                                             os.path.basename(p.rstrip("/"))))
+        os.makedirs(ext, exist_ok=True)
+        if is_dir:
+            shutil.copytree(p, dst)
+        else:
+            os.makedirs(dst, exist_ok=True)
+            shutil.copy2(p, dst)
+            dst = os.path.join(dst, os.path.basename(p))
+        return os.path.relpath(dst, comp)
+    incs = [localise(d, True) for d in incs]
+    srcs = [localise(x, False) for x in srcs]
+
+    defs = man["defines"]
+    with open(os.path.join(comp, "CMakeLists.txt"), "w") as f:
+        f.write("# Generated by esp32/make_project.py for recipe %s\n" % a.recipe)
+        f.write("idf_component_register(\n  SRCS\n")
+        for s in srcs:
+            f.write("    %s\n" % cstr(s))
+        f.write("  INCLUDE_DIRS\n")
+        for d in incs:
+            f.write("    %s\n" % cstr(d))
+        f.write(")\n")
+        # ESP-IDF compiles every component with -Werror=all. Third-party
+        # scheme code must not fail on warnings it does not raise on Linux,
+        # and -Wno-error alone does not undo -Werror=all, so each -Wall
+        # warning is downgraded by name.
+        nowerr = ["unused-variable", "unused-but-set-variable", "maybe-uninitialized", "uninitialized",
+                  "unused-function", "unused-value", "unused-label", "array-bounds", "stringop-overflow",
+                  "stringop-overread", "stringop-truncation", "misleading-indentation", "parentheses",
+                  "char-subscripts", "address", "format", "restrict", "dangling-pointer", "use-after-free",
+                  "int-in-bool-context", "comment", "nonnull", "switch", "missing-braces", "pointer-sign",
+                  "enum-int-mismatch", "array-parameter", "vla-parameter", "zero-length-bounds",
+                  "bool-compare", "logical-not-parentheses", "sizeof-pointer-div", "tautological-compare",
+                  "infinite-recursion", "mismatched-dealloc", "frame-address", "unused-local-typedefs",
+                  "sequence-point", "strict-aliasing", "memset-elt-size", "sizeof-pointer-memaccess",
+                  "aggressive-loop-optimizations", "overflow", "shift-count-overflow"]
+        f.write("target_compile_options(${COMPONENT_LIB} PRIVATE -O3 -Wno-unused-function -Wno-error %s)\n"
+                % " ".join("-Wno-error=" + w for w in nowerr))
+        if defs:
+            f.write("target_compile_definitions(${COMPONENT_LIB} PUBLIC\n")
+            for d in defs:
+                f.write("    %s\n" % d)
+            f.write(")\n")
+
+    # main component: harness driver + ESP32 platform + generated plan
+    for f in ("bench_main.c", "hsha256.c", "hsha256.h"):
+        shutil.copy(os.path.join(H, "src", f), main_dir)
+    shutil.copy(os.path.join(H, "platform", "plat_esp32.c"), main_dir)
+    plan = [p.strip().split() for p in a.plan.split(";") if p.strip()]
+    with open(os.path.join(main_dir, "app_main.c"), "w") as f:
+        f.write('/* Generated by esp32/make_project.py. Plan: %s */\n' % a.plan)
+        f.write('#include <stdio.h>\n#include "sdkconfig.h"\n#include "freertos/FreeRTOS.h"\n#include "freertos/task.h"\n#include "esp_heap_caps.h"\n')
+        f.write('int harness_run(int argc, char **argv);\n\n')
+        for i, p in enumerate(plan):
+            f.write("static char *plan_%d[] = { \"bench\", %s };\n" % (i, ", ".join(cstr(x) for x in p)))
+        f.write("\nstatic void bench_task(void *arg)\n{\n    (void)arg;\n")
+        f.write("    vTaskDelay(pdMS_TO_TICKS(2000));   /* time to open the serial monitor */\n")
+        for i, p in enumerate(plan):
+            f.write("    harness_run(%d, plan_%d);\n" % (len(p) + 1, i))
+        f.write('    printf("DONE\\n");\n    fflush(stdout);\n')
+        f.write("    for (;;) {\n        vTaskDelay(pdMS_TO_TICKS(1000));\n    }\n}\n\n")
+        f.write("void app_main(void)\n{\n")
+        f.write("    unsigned stack = %d;\n" % a.task_stack)
+        f.write("    if (xTaskCreatePinnedToCore(bench_task, \"bench\", stack, NULL, 5, NULL, 1) == pdPASS) {\n")
+        f.write("        return;\n    }\n")
+        f.write("#if CONFIG_SPIRAM && CONFIG_SPIRAM_ALLOW_STACK_EXTERNAL_MEMORY\n")
+        f.write("    /* No internal block is large enough: put the whole stack in PSRAM. The\n")
+        f.write("       run is then slower than with an internal stack, so it is marked. */\n")
+        f.write("    static StaticTask_t tcb;\n")
+        f.write("    StackType_t *ext = heap_caps_malloc(stack, MALLOC_CAP_SPIRAM | MALLOC_CAP_8BIT);\n")
+        f.write("    if (ext != NULL && xTaskCreateStaticPinnedToCore(bench_task, \"bench\", stack, NULL, 5, ext, &tcb, 1) != NULL) {\n")
+        f.write("        vTaskDelay(pdMS_TO_TICKS(100));\n")
+        f.write("        printf(\"NOTE,task_stack_in_psram,%u\\n\", stack);\n")
+        f.write("        return;\n    }\n")
+        f.write("#endif\n")
+        f.write("    /* The requested stack does not fit in one block of internal RAM. Try the\n")
+        f.write("       largest block left (minus room for the semaphores the harness makes);\n")
+        f.write("       if the scheme then overflows it, the capture records the crash. */\n")
+        f.write("    unsigned wanted = stack;\n")
+        f.write("    unsigned big = (unsigned)heap_caps_get_largest_free_block(MALLOC_CAP_INTERNAL | MALLOC_CAP_8BIT);\n")
+        f.write("    stack = (big > 8192u) ? ((big - 8192u) & ~4095u) : 0u;\n")
+        f.write("    vTaskDelay(pdMS_TO_TICKS(2000));\n")
+        f.write("    if (stack >= 32768u && xTaskCreatePinnedToCore(bench_task, \"bench\", stack, NULL, 5, NULL, 1) == pdPASS) {\n")
+        f.write("        printf(\"NOTE,task_stack_reduced,wanted,%u,got,%u\\n\", wanted, stack);\n")
+        f.write("        return;\n    }\n")
+        f.write("    printf(\"ERROR,task_stack_alloc_failed,%u,largest_internal_block,%u\\n\", wanted, big);\n")
+        f.write("    printf(\"DONE\\n\");\n}\n")
+    ident = {
+        "HARNESS_SCHEME": man["scheme"], "HARNESS_PARAM": man["param"],
+        "HARNESS_VARIANT": man["variant"], "HARNESS_PLATFORM": "esp32",
+        "HARNESS_CFLAGS": ("-O3 " + " ".join("-D" + d for d in defs)).replace(",", "|").replace(";", "|").replace('"', ""),
+    }
+    with open(os.path.join(main_dir, "CMakeLists.txt"), "w") as f:
+        f.write('idf_component_register(SRCS "app_main.c" "bench_main.c" "hsha256.c" "plat_esp32.c"\n')
+        f.write('                       INCLUDE_DIRS "." PRIV_REQUIRES scheme esp_timer driver)\n')
+        f.write("target_compile_options(${COMPONENT_LIB} PRIVATE -O3)\n")
+        f.write("target_compile_definitions(${COMPONENT_LIB} PRIVATE\n")
+        for k, v in ident.items():
+            # One quoted CMake argument per define: "NAME=\"value\""
+            f.write('    "%s=\\"%s\\""\n' % (k, v))
+        f.write("    HARNESS_MARKER_GPIO=%d\n" % a.marker_gpio)
+        f.write("    HARNESS_STACK_TASK_BYTES=%d\n" % a.task_stack)
+        for d in man.get("bench_defines", []):
+            f.write("    %s\n" % d)
+        f.write(")\n")
+    with open(os.path.join(out, "CMakeLists.txt"), "w") as f:
+        f.write("cmake_minimum_required(VERSION 3.16)\n")
+        f.write("include($ENV{IDF_PATH}/tools/cmake/project.cmake)\n")
+        f.write("project(pqsig_%s)\n" % a.recipe.replace("-", "_"))
+    shutil.copy(os.path.join(HERE, "sdkconfig.defaults"), out)
+    print("ESP-IDF project written to", out)
+    print("next: cd %s && idf.py set-target esp32 && idf.py build flash" % out)
+
+
+if __name__ == "__main__":
+    main()

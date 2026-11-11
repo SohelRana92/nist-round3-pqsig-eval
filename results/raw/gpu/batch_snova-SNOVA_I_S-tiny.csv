@@ -1,0 +1,116 @@
+GPU_BUILD,SNOVA,SNOVA_I_S,tiny,registers,170,stack_bound,2872,stack_dynamic,0,mutable_globals,-
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,0,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1,0,9587456,104.3,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1,1,9580864,104.4,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1,2,9571456,104.5,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1,3,9575584,104.4,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1,4,9577376,104.4,1
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,shared,1,16800,4640,1368
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,0,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,64,rep,-1,count,63,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,64,rep,0,count,63,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,64,0,12124416,5278.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,64,1,11697248,5471.4,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,64,2,12042208,5314.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,64,3,11851008,5400.4,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,64,4,12052000,5310.3,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,shared,64,21312,6848,23040
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,1024,chunk,0
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,1024,chunk,256
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,256,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,1024,rep,-1,count,1023,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,1024,rep,0,count,1023,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1024,0,56551167,18107.5,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1024,1,56512482,18119.9,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1024,2,56567585,18102.2,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1024,3,56501152,18123.5,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,1024,4,56480480,18130.2,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,shared,1024,52960,6976,353280
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,16384,chunk,0
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,16384,chunk,2048
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,16384,chunk,256
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,256,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,16384,rep,-1,count,16383,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,16384,rep,0,count,16383,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,16384,0,904459290,18114.7,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,16384,1,904630249,18111.3,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,16384,2,904738831,18109.1,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,16384,3,904821777,18107.4,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,16384,4,904465393,18114.6,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,shared,16384,667776,7456,5637120
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,65536,chunk,0
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,65536,chunk,16384
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,65536,chunk,2048
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,65536,chunk,256
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,256,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,65536,rep,-1,count,65535,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,shared,65536,rep,0,count,65535,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,65536,0,3618443115,18111.7,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,65536,1,3618082764,18113.5,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,65536,2,3617850342,18114.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,65536,3,3618183105,18113.0,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,shared,128,65536,4,3617803223,18114.9,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,shared,65536,2655936,13280,22545408
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,0,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1,0,9577920,104.4,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1,1,9580864,104.4,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1,2,9570080,104.5,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1,3,9569120,104.5,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1,4,9574624,104.4,1
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,distinct,1,16192,6432,1368
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,0,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,64,rep,-1,count,63,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,64,rep,0,count,63,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,64,0,12267456,5217.1,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,64,1,11966272,5348.4,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,64,2,12159488,5263.4,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,64,3,11938976,5360.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,64,4,12248704,5225.0,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,distinct,64,31008,6464,87552
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,1024,chunk,0
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,1024,chunk,256
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,256,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,1024,rep,-1,count,1023,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,1024,rep,0,count,1023,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1024,0,57266529,17881.3,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1024,1,57216064,17897.1,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1024,2,57215424,17897.3,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1024,3,57138783,17921.3,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,1024,4,57228992,17893.0,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,distinct,1024,180960,6624,1400832
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,16384,chunk,0
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,16384,chunk,2048
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,16384,chunk,256
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,256,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,16384,rep,-1,count,16383,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,16384,rep,0,count,16383,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,16384,0,915402771,17898.1,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,16384,1,915686401,17892.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,16384,2,915632141,17893.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,16384,3,915358704,17899.0,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,16384,4,915332092,17899.5,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,distinct,16384,2439040,8128,22413312
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,65536,chunk,0
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,65536,chunk,16384
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,65536,chunk,2048
+RETRY,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,65536,chunk,256
+GPU_INFO,SNOVA,SNOVA_I_S,tiny,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,170,local_bytes,2872,tpb,128,stack_limit,3896,heap_mb,4096,chunk,256,mem_free_mb,15295,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,65536,rep,-1,count,65535,first,0,got,0,expected,1
+NOTE,wrong_results,SNOVA,SNOVA_I_S,tiny,distinct,65536,rep,0,count,65535,first,0,got,0,expected,1
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,65536,0,3664449463,17884.3,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,65536,1,3664584717,17883.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,65536,2,3664767578,17882.7,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,65536,3,3664593018,17883.6,0
+BATCH,SNOVA,SNOVA_I_S,tiny,gpu,gpu,distinct,128,65536,4,3663920166,17886.9,0
+GPU_XFER,SNOVA,SNOVA_I_S,tiny,distinct,65536,9770656,23360,89653248
+GPU_DONE,SNOVA,SNOVA_I_S,tiny

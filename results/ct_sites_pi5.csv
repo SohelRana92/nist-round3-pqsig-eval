@@ -1,0 +1,20 @@
+recipe,memcheck_contexts_pi5,main_sites,class,reason
+ed25519-ref,0,-,none,no report
+ecdsa-p256-ref,11,uECC_vli_mmod; vli_numDigits; uECC_vli_sub; uECC_vli_modAdd,secret-dependent,micro-ecc modular arithmetic branches on secret scalars (as on x86)
+mldsa-44-ref,9,rej_uniform; poly_challenge; chknorm; make_hint; pack_sig,public-by-design,same sites as on x86
+fndsa-512-ref,64,ber_exp; sampler_next; trim_i8_decode; hash_to_point,public-by-design,sampler rejection and key decoding range checks (as on x86)
+fndsa-512-opt,64,ber_exp; sampler_next_neon; trim_i8_decode,public-by-design,same sites as the reference build
+faest-faest_128s-ref,24,bavc_open; memcpy overlap checks inside bavc_open; check_challenge_3,public-by-design,commitment opening at challenge positions; the memcpy reports are Valgrind's overlap check on challenge-derived offsets
+faest-faest_128s-opt-neon,24,as faest_128s-ref,public-by-design,same sites
+mqom-cat1_gf16_short_ct-ref,1000 (cap),aes128_table_enc; aes128_table_setkey_enc,secret-dependent,T-table AES on secret seeds (as on x86)
+mqom-cat1_gf16_short_ct-opt-neon,15,SmallGGMTree_Open; Sign_default retry; CT_BLC_Open,public-by-design,tree opening at challenge positions and signing retry (as opt-avx2)
+sdith-cat1_short-ref,234,rijndaelEncrypt; rijndaelKeySetupEnc; ggm tree opening,secret-dependent,T-table AES on secret seeds (as on x86)
+uov-Ip_pkc-ref-portable,1,ov_sign_core (ov.c:150),public-by-design,retry when the linear system is singular (as on x86)
+uov-Ip_pkc-opt-neon,1,ov_sign_core (ov.c:150),public-by-design,same retry branch
+mayo-MAYO_1-ref,1,sample_solution (arithmetic.c:86),public-by-design,retry when not full rank (as on x86)
+mayo-MAYO_1-opt-neon,81,subword in aes_neon.c (AES-128 key schedule via S-box table); sample_solution retry,public-by-design,the table lookups expand P1 and P2 from seed_pk; seed_pk is derived from the secret seed but is published in the public key; the retry is as in ref
+qruov-1q127L10-aes-opt-portable,19,fastop_rejection_sample; canonicalize_s; linsys_lu_decompose,secret-dependent,same variable-time solver as on x86
+snova-SNOVA_I_K-opt,2,sign retry (snova_opt_16.c:1343); crypto_sign return,public-by-design,retry decision (as on x86)
+slhdsa-sha2-128s-ref,13,sha2_256_chain; xmss_pk_from_sig; fors_pk_from_sig,public-by-design,WOTS chain lengths and tree paths come from the message digest
+sqisign-p324_3-ref-portable,1000 (cap),ibz_mod; mp_divmod_schoolbook; mp_shl_words; memcpy/memset lengths,secret-dependent,variable-time big-integer arithmetic on secret ideals (as on x86)
+sqisign-p324_3-opt-arm64,1000 (cap),sqisign_gen_ibz_mod; ibz_div; ibz_gcd; __udivti3/__umodti3,secret-dependent,same big-integer routines; 128-bit division runs in the compiler's variable-time helpers

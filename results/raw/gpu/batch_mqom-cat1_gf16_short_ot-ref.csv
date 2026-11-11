@@ -1,0 +1,88 @@
+GPU_BUILD,MQOM,cat1_gf16_short_ot,ref,registers,255,stack_bound,5320,stack_dynamic,0,mutable_globals,mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr25;mqom_cleanse.mqom_memset_ptr5
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,0,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1,0,425236084,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1,1,425204102,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1,2,425133240,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1,3,425093109,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1,4,425128357,2.4,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,shared,1,17792,6688,3080
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,0,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,64,0,781656921,81.9,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,64,1,784116150,81.6,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,64,2,791547058,80.9,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,64,3,785220154,81.5,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,64,4,783780640,81.7,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,shared,64,40832,7552,193088
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,0,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1024,0,1116720581,917.0,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1024,1,1106055908,925.8,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1024,2,1112384155,920.5,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1024,3,1109108643,923.3,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,1024,4,1112283203,920.6,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,shared,1024,373024,6720,3088448
+RETRY,wrong_results,MQOM,cat1_gf16_short_ot,ref,shared,16384,chunk,0
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,2048,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,16384,0,9137749023,1793.0,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,16384,1,9202095703,1780.5,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,16384,2,9208873047,1779.2,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,16384,3,9111250977,1798.2,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,16384,4,9146462891,1791.3,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,shared,16384,5653472,11456,49414208
+RETRY,wrong_results,MQOM,cat1_gf16_short_ot,ref,shared,65536,chunk,0
+RETRY,wrong_results,MQOM,cat1_gf16_short_ot,ref,shared,65536,chunk,16384
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,2048,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,65536,0,36645730469,1788.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,65536,1,36581234375,1791.5,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,65536,2,36663113281,1787.5,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,65536,3,36650937500,1788.1,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,shared,128,65536,4,36633777344,1789.0,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,shared,65536,20266239,32736,197656640
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,0,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1,0,425470093,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1,1,425405090,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1,2,425511414,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1,3,425355774,2.4,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1,4,425421112,2.4,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,distinct,1,18016,6560,3080
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,0,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,64,0,781268799,81.9,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,64,1,780119995,82.0,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,64,2,790716980,80.9,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,64,3,781942383,81.8,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,64,4,784919189,81.5,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,distinct,64,41344,6688,197120
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,0,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1024,0,1113332275,919.8,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1024,1,1121701416,912.9,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1024,2,1114467773,918.8,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1024,3,1117116089,916.6,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,1024,4,1114468506,918.8,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,distinct,1024,401280,5472,3153920
+RETRY,wrong_results,MQOM,cat1_gf16_short_ot,ref,distinct,16384,chunk,0
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,2048,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,16384,0,9175575195,1785.6,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,16384,1,9138699219,1792.8,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,16384,2,9127766602,1795.0,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,16384,3,9154437500,1789.7,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,16384,4,9163239258,1788.0,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,distinct,16384,5736992,9408,50462720
+RETRY,wrong_results,MQOM,cat1_gf16_short_ot,ref,distinct,65536,chunk,0
+RETRY,wrong_results,MQOM,cat1_gf16_short_ot,ref,distinct,65536,chunk,16384
+GPU_INFO,MQOM,cat1_gf16_short_ot,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,5320,tpb,128,stack_limit,6344,heap_mb,4096,chunk,2048,mem_free_mb,15043,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,65536,0,36700562500,1785.7,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,65536,1,36699214844,1785.8,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,65536,2,36536339844,1793.7,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,65536,3,36777011719,1782.0,1
+BATCH,MQOM,cat1_gf16_short_ot,ref,gpu,gpu,distinct,128,65536,4,36750691406,1783.3,1
+GPU_XFER,MQOM,cat1_gf16_short_ot,ref,distinct,65536,21773760,28192,201850880
+GPU_DONE,MQOM,cat1_gf16_short_ot,ref

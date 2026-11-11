@@ -1,0 +1,70 @@
+recipe,scheme,param,variant,status,limit,detail
+ecdsa-p256-ref,ECDSA,P-256,ref,runs,,
+ed25519-ref,Ed25519,Ed25519,ref,runs,,
+faest-faest_128f-ref,FAEST,faest_128f,ref,no run,heap,store to address 0: an unchecked allocation returned NULL
+faest-faest_128s-ref,FAEST,faest_128s,ref,no run,heap,store to address 0: an unchecked allocation returned NULL
+faest-faest_em_128f-ref,FAEST,faest_em_128f,ref,runs,,sign 100 runs; verify 100 runs
+faest-faest_em_128s-ref,FAEST,faest_em_128s,ref,no run,heap,store to address 0: an unchecked allocation returned NULL
+fndsa-512-ref,FN-DSA,FN-DSA-512,ref,runs,,
+mayo-MAYO_1-ref,MAYO,MAYO_1,ref,no run,stack,"needs about 813 KB of stack, 160 KB available"
+mayo-MAYO_2-ref,MAYO,MAYO_2,ref,no run,stack,"needs about 368 KB of stack, 160 KB available"
+mldsa-44-ref,ML-DSA,ML-DSA-44,ref,runs,,
+mqom-cat1_gf16_fast_ct-ref,MQOM,cat1_gf16_fast_ct,ref,keygen only,heap,"operations return an error (ok=0): sign, verify"
+mqom-cat1_gf16_fast_ot-ref,MQOM,cat1_gf16_fast_ot,ref,keygen only,heap,"operations return an error (ok=0): sign, verify"
+mqom-cat1_gf16_short_ct-ref,MQOM,cat1_gf16_short_ct,ref,keygen only,heap,"operations return an error (ok=0): sign, verify"
+mqom-cat1_gf16_short_ot-ref,MQOM,cat1_gf16_short_ot,ref,keygen only,heap,"operations return an error (ok=0): sign, verify"
+mqom-cat1_gf2_shorter_ct-ref,MQOM,cat1_gf2_shorter_ct,ref,no run,heap,"operations return an error (ok=0): keypair, sign, verify"
+mqom-cat1_gf2_shorter_ot-ref,MQOM,cat1_gf2_shorter_ot,ref,no run,heap,"operations return an error (ok=0): keypair, sign, verify"
+qruov-1q127L10-aes-opt-portable,QR-UOV,1q127L10-aes,opt-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q127L10-aes-ref-portable,QR-UOV,1q127L10-aes,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q127L10-shake-opt-portable,QR-UOV,1q127L10-shake,opt-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q127L10-shake-ref-portable,QR-UOV,1q127L10-shake,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q127L3-aes-opt-portable,QR-UOV,1q127L3-aes,opt-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q127L3-aes-ref-portable,QR-UOV,1q127L3-aes,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q127L3-shake-opt-portable,QR-UOV,1q127L3-shake,opt-portable,runs,,keypair 100 runs
+qruov-1q127L3-shake-ref-portable,QR-UOV,1q127L3-shake,ref-portable,runs,,keypair 100 runs
+qruov-1q31L10-aes-opt-portable,QR-UOV,1q31L10-aes,opt-portable,no run,stack,"needs about 189 KB of stack, 160 KB available"
+qruov-1q31L10-aes-ref-portable,QR-UOV,1q31L10-aes,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q31L10-shake-opt-portable,QR-UOV,1q31L10-shake,opt-portable,no run,stack,"needs about 189 KB of stack, 160 KB available"
+qruov-1q31L10-shake-ref-portable,QR-UOV,1q31L10-shake,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q31L3-aes-opt-portable,QR-UOV,1q31L3-aes,opt-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q31L3-aes-ref-portable,QR-UOV,1q31L3-aes,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q31L3-shake-opt-portable,QR-UOV,1q31L3-shake,opt-portable,runs,,keypair 100 runs
+qruov-1q31L3-shake-ref-portable,QR-UOV,1q31L3-shake,ref-portable,runs,,keypair 100 runs
+qruov-1q7L10-aes-opt-portable,QR-UOV,1q7L10-aes,opt-portable,no run,stack,"needs about 330 KB of stack, 160 KB available"
+qruov-1q7L10-aes-ref-portable,QR-UOV,1q7L10-aes,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+qruov-1q7L10-shake-opt-portable,QR-UOV,1q7L10-shake,opt-portable,no run,stack,"needs about 330 KB of stack, 160 KB available"
+qruov-1q7L10-shake-ref-portable,QR-UOV,1q7L10-shake,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+slhdsa-sha2-128f-ref,SLH-DSA,SLH-DSA-SHA2-128f,ref,runs,,sign 100 runs
+slhdsa-sha2-128s-ref,SLH-DSA,SLH-DSA-SHA2-128s,ref,runs,,keypair 100 runs; sign 100 runs; verify 599 runs (8 h capture limit)
+snova-SNOVA_I_B-mem,SNOVA,SNOVA_I_B,mem,runs,,sign 100 runs
+snova-SNOVA_I_B-opt,SNOVA,SNOVA_I_B,opt,no run,stack,"needs about 314 KB of stack, 120 KB available"
+snova-SNOVA_I_B-ref,SNOVA,SNOVA_I_B,ref,no run,stack,"needs about 358 KB of stack, 152 KB available"
+snova-SNOVA_I_B-tiny,SNOVA,SNOVA_I_B,tiny,runs,,sign 100 runs
+snova-SNOVA_I_B_AES-mem,SNOVA,SNOVA_I_B_AES,mem,runs,,
+snova-SNOVA_I_B_AES-opt,SNOVA,SNOVA_I_B_AES,opt,no run,stack,"needs about 310 KB of stack, 120 KB available"
+snova-SNOVA_I_B_AES-ref,SNOVA,SNOVA_I_B_AES,ref,no run,stack,"needs about 358 KB of stack, 152 KB available"
+snova-SNOVA_I_B_AES-tiny,SNOVA,SNOVA_I_B_AES,tiny,runs,,
+snova-SNOVA_I_K-mem,SNOVA,SNOVA_I_K,mem,runs,,
+snova-SNOVA_I_K-opt,SNOVA,SNOVA_I_K,opt,no run,stack,"needs about 390 KB of stack, 108 KB available"
+snova-SNOVA_I_K-ref,SNOVA,SNOVA_I_K,ref,no run,stack,"needs about 397 KB of stack, 144 KB available"
+snova-SNOVA_I_K-tiny,SNOVA,SNOVA_I_K,tiny,runs,,sign 100 runs
+snova-SNOVA_I_K_AES-mem,SNOVA,SNOVA_I_K_AES,mem,runs,,
+snova-SNOVA_I_K_AES-opt,SNOVA,SNOVA_I_K_AES,opt,no run,stack,"needs about 390 KB of stack, 108 KB available"
+snova-SNOVA_I_K_AES-ref,SNOVA,SNOVA_I_K_AES,ref,no run,stack,"needs about 397 KB of stack, 144 KB available"
+snova-SNOVA_I_K_AES-tiny,SNOVA,SNOVA_I_K_AES,tiny,runs,,sign 100 runs
+snova-SNOVA_I_S-mem,SNOVA,SNOVA_I_S,mem,runs,,
+snova-SNOVA_I_S-opt,SNOVA,SNOVA_I_S,opt,no run,stack,"needs about 333 KB of stack, 136 KB available"
+snova-SNOVA_I_S-ref,SNOVA,SNOVA_I_S,ref,no run,stack,"needs about 349 KB of stack, 152 KB available"
+snova-SNOVA_I_S-tiny,SNOVA,SNOVA_I_S,tiny,runs,,
+snova-SNOVA_I_S_AES-mem,SNOVA,SNOVA_I_S_AES,mem,runs,,
+snova-SNOVA_I_S_AES-opt,SNOVA,SNOVA_I_S_AES,opt,no run,stack,"needs about 330 KB of stack, 136 KB available"
+snova-SNOVA_I_S_AES-ref,SNOVA,SNOVA_I_S_AES,ref,no run,stack,"needs about 349 KB of stack, 152 KB available"
+snova-SNOVA_I_S_AES-tiny,SNOVA,SNOVA_I_S_AES,tiny,runs,,
+sqisign-p324_3-ref-portable,SQIsign,p324_3,ref-portable,runs,,keypair 100 runs; sign 100 runs; verify 100 runs
+uov-Ip-ref-portable,UOV,Ip,ref-portable,no run,heap,"alloc_failed,pk=321300,sk=278087,sig=135"
+uov-Ip_pkc-ref-portable,UOV,Ip_pkc,ref-portable,no run,heap,"alloc_failed,pk=46591,sk=278087,sig=135"
+uov-Ip_pkc_skc-ref-portable,UOV,Ip_pkc_skc,ref-portable,no run,heap,"operations return an error (ok=0): keypair, sign, verify"
+uov-Is-ref-portable,UOV,Is,ref-portable,no run,heap,"alloc_failed,pk=412160,sk=348704,sig=96"
+uov-Is_pkc-ref-portable,UOV,Is_pkc,ref-portable,no run,heap,"alloc_failed,pk=66576,sk=348704,sig=96"
+uov-Is_pkc_skc-ref-portable,UOV,Is_pkc_skc,ref-portable,no run,heap,"operations return an error (ok=0): keypair, sign, verify"

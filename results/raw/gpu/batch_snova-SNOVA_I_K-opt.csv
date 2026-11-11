@@ -1,0 +1,3 @@
+GPU_BUILD,SNOVA,SNOVA_I_K,opt,registers,254,stack_bound,340976,stack_dynamic,0,mutable_globals,first_time;fixedAm;fixedBm;fixed_abq;fixedq1;fixedq2
+ERROR,stack_limit,CUDA_ERROR_OUT_OF_MEMORY,SNOVA,SNOVA_I_K,opt,shared,1
+GPU_DONE,SNOVA,SNOVA_I_K,opt

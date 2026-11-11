@@ -1,0 +1,1569 @@
+[
+ {
+  "status": "ok",
+  "registers": 224,
+  "stack_frame_kernel": 1048,
+  "stack_bound": 1048,
+  "stack_dynamic": false,
+  "functions_not_inlined": 6,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "ecdsa-p256-ref",
+  "scheme": "ECDSA",
+  "param": "P-256",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 246,
+  "stack_frame_kernel": 1408,
+  "stack_bound": 1408,
+  "stack_dynamic": false,
+  "functions_not_inlined": 7,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "ed25519-ref",
+  "scheme": "Ed25519",
+  "param": "Ed25519",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 10512,
+  "stack_bound": 10512,
+  "stack_dynamic": false,
+  "functions_not_inlined": 14,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "faest-faest_128f-ref",
+  "scheme": "FAEST",
+  "param": "faest_128f",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 10512,
+  "stack_bound": 10512,
+  "stack_dynamic": false,
+  "functions_not_inlined": 14,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "faest-faest_128s-ref",
+  "scheme": "FAEST",
+  "param": "faest_128s",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 9360,
+  "stack_bound": 9360,
+  "stack_dynamic": false,
+  "functions_not_inlined": 13,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "faest-faest_em_128f-ref",
+  "scheme": "FAEST",
+  "param": "faest_em_128f",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 9360,
+  "stack_bound": 9360,
+  "stack_dynamic": false,
+  "functions_not_inlined": 13,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "faest-faest_em_128s-ref",
+  "scheme": "FAEST",
+  "param": "faest_em_128s",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 109,
+  "stack_frame_kernel": 4536,
+  "stack_bound": 4536,
+  "stack_dynamic": false,
+  "functions_not_inlined": 0,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "fndsa-512-ref",
+  "scheme": "FN-DSA",
+  "param": "FN-DSA-512",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 764592,
+  "stack_bound": 764616,
+  "stack_dynamic": false,
+  "functions_not_inlined": 6,
+  "mutable_globals": [
+   "mayo_secure_clear.memset_func",
+   "pqmayo_MAYO_1_ref_unsigned_char_blocker"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mayo-MAYO_1-ref",
+  "scheme": "MAYO",
+  "param": "MAYO_1",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 358704,
+  "stack_bound": 358728,
+  "stack_dynamic": false,
+  "functions_not_inlined": 6,
+  "mutable_globals": [
+   "mayo_secure_clear.memset_func",
+   "pqmayo_MAYO_2_ref_unsigned_char_blocker"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mayo-MAYO_2-ref",
+  "scheme": "MAYO",
+  "param": "MAYO_2",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 149,
+  "stack_frame_kernel": 37120,
+  "stack_bound": 37120,
+  "stack_dynamic": false,
+  "functions_not_inlined": 6,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "mldsa-44-ref",
+  "scheme": "ML-DSA",
+  "param": "ML-DSA-44",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 5040,
+  "stack_bound": 5064,
+  "stack_dynamic": false,
+  "functions_not_inlined": 10,
+  "mutable_globals": [
+   "mqom_cleanse.mqom_memset_ptr16",
+   "mqom_cleanse.mqom_memset_ptr23",
+   "mqom_cleanse.mqom_memset_ptr5"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mqom-cat1_gf16_fast_ct-ref",
+  "scheme": "MQOM",
+  "param": "cat1_gf16_fast_ct",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 6384,
+  "stack_bound": 6408,
+  "stack_dynamic": false,
+  "functions_not_inlined": 10,
+  "mutable_globals": [
+   "mqom_cleanse.mqom_memset_ptr16",
+   "mqom_cleanse.mqom_memset_ptr25",
+   "mqom_cleanse.mqom_memset_ptr5"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mqom-cat1_gf16_fast_ot-ref",
+  "scheme": "MQOM",
+  "param": "cat1_gf16_fast_ot",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 5488,
+  "stack_bound": 5512,
+  "stack_dynamic": false,
+  "functions_not_inlined": 11,
+  "mutable_globals": [
+   "mqom_cleanse.mqom_memset_ptr16",
+   "mqom_cleanse.mqom_memset_ptr23",
+   "mqom_cleanse.mqom_memset_ptr5"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mqom-cat1_gf16_short_ct-ref",
+  "scheme": "MQOM",
+  "param": "cat1_gf16_short_ct",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 5296,
+  "stack_bound": 5320,
+  "stack_dynamic": false,
+  "functions_not_inlined": 11,
+  "mutable_globals": [
+   "mqom_cleanse.mqom_memset_ptr16",
+   "mqom_cleanse.mqom_memset_ptr25",
+   "mqom_cleanse.mqom_memset_ptr5"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mqom-cat1_gf16_short_ot-ref",
+  "scheme": "MQOM",
+  "param": "cat1_gf16_short_ot",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 7280,
+  "stack_bound": 7304,
+  "stack_dynamic": false,
+  "functions_not_inlined": 11,
+  "mutable_globals": [
+   "mqom_cleanse.mqom_memset_ptr16",
+   "mqom_cleanse.mqom_memset_ptr23",
+   "mqom_cleanse.mqom_memset_ptr5"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mqom-cat1_gf2_shorter_ct-ref",
+  "scheme": "MQOM",
+  "param": "cat1_gf2_shorter_ct",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 7280,
+  "stack_bound": 7304,
+  "stack_dynamic": false,
+  "functions_not_inlined": 11,
+  "mutable_globals": [
+   "mqom_cleanse.mqom_memset_ptr16",
+   "mqom_cleanse.mqom_memset_ptr25",
+   "mqom_cleanse.mqom_memset_ptr5"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "mqom-cat1_gf2_shorter_ot-ref",
+  "scheme": "MQOM",
+  "param": "cat1_gf2_shorter_ot",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 161,
+  "stack_frame_kernel": 39936,
+  "stack_bound": 39936,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L10-aes-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L10-aes",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 162,
+  "stack_frame_kernel": 52240,
+  "stack_bound": 52240,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L10-aes-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L10-aes",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 140,
+  "stack_frame_kernel": 39408,
+  "stack_bound": 39432,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L10-shake-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L10-shake",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 165,
+  "stack_frame_kernel": 51776,
+  "stack_bound": 51800,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L10-shake-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L10-shake",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 160,
+  "stack_frame_kernel": 19824,
+  "stack_bound": 19824,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L3-aes-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L3-aes",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 21752,
+  "stack_bound": 21752,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L3-aes-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L3-aes",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 115,
+  "stack_frame_kernel": 19288,
+  "stack_bound": 19312,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L3-shake-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L3-shake",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 158,
+  "stack_frame_kernel": 21288,
+  "stack_bound": 21312,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q127L3-shake-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q127L3-shake",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 50336,
+  "stack_bound": 50336,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L10-aes-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L10-aes",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 166,
+  "stack_frame_kernel": 65248,
+  "stack_bound": 65248,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L10-aes-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L10-aes",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 139,
+  "stack_frame_kernel": 49808,
+  "stack_bound": 49832,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L10-shake-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L10-shake",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 164,
+  "stack_frame_kernel": 64784,
+  "stack_bound": 64808,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L10-shake-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L10-shake",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 160,
+  "stack_frame_kernel": 23224,
+  "stack_bound": 23224,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L3-aes-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L3-aes",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 163,
+  "stack_frame_kernel": 25272,
+  "stack_bound": 25272,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L3-aes-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L3-aes",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 138,
+  "stack_frame_kernel": 22696,
+  "stack_bound": 22720,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L3-shake-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L3-shake",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 126,
+  "stack_frame_kernel": 24808,
+  "stack_bound": 24832,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q31L3-shake-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q31L3-shake",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 162,
+  "stack_frame_kernel": 83424,
+  "stack_bound": 83424,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q7L10-aes-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q7L10-aes",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 161,
+  "stack_frame_kernel": 105008,
+  "stack_bound": 105008,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q7L10-aes-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q7L10-aes",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 140,
+  "stack_frame_kernel": 82896,
+  "stack_bound": 82920,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q7L10-shake-opt-portable",
+  "scheme": "QR-UOV",
+  "param": "1q7L10-shake",
+  "variant": "opt-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 136,
+  "stack_frame_kernel": 104544,
+  "stack_bound": 104568,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "qruov-1q7L10-shake-ref-portable",
+  "scheme": "QR-UOV",
+  "param": "1q7L10-shake",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 2640,
+  "stack_bound": 2640,
+  "stack_dynamic": false,
+  "functions_not_inlined": 58,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "sdith-cat1_fast-ref",
+  "scheme": "SDitH",
+  "param": "cat1_fast",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 2640,
+  "stack_bound": 2640,
+  "stack_dynamic": false,
+  "functions_not_inlined": 58,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "sdith-cat1_fast_cipherpow-ref",
+  "scheme": "SDitH",
+  "param": "cat1_fast_cipherpow",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 2640,
+  "stack_bound": 2640,
+  "stack_dynamic": false,
+  "functions_not_inlined": 58,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "sdith-cat1_short-ref",
+  "scheme": "SDitH",
+  "param": "cat1_short",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 255,
+  "stack_frame_kernel": 2640,
+  "stack_bound": 2640,
+  "stack_dynamic": false,
+  "functions_not_inlined": 58,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "sdith-cat1_short_cipherpow-ref",
+  "scheme": "SDitH",
+  "param": "cat1_short_cipherpow",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 125,
+  "stack_frame_kernel": 3136,
+  "stack_bound": 3704,
+  "stack_dynamic": false,
+  "functions_not_inlined": 13,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "slhdsa-sha2-128f-ref",
+  "scheme": "SLH-DSA",
+  "param": "SLH-DSA-SHA2-128f",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 125,
+  "stack_frame_kernel": 3136,
+  "stack_bound": 3704,
+  "stack_dynamic": false,
+  "functions_not_inlined": 13,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "slhdsa-sha2-128s-ref",
+  "scheme": "SLH-DSA",
+  "param": "SLH-DSA-SHA2-128s",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 156,
+  "stack_frame_kernel": 6024,
+  "stack_bound": 6024,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B-mem",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B",
+  "variant": "mem",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 307888,
+  "stack_bound": 307888,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [
+   "first_time",
+   "fixedAm",
+   "fixedBm",
+   "fixed_abq",
+   "fixedq1",
+   "fixedq2"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B-opt",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B",
+  "variant": "opt",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 152,
+  "stack_frame_kernel": 291192,
+  "stack_bound": 291192,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [
+   "first_time",
+   "fixed_abq",
+   "gen_fixed_ABQ.first",
+   "gf_S",
+   "gf_addtab",
+   "gf_multtab"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B-ref",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 4128,
+  "stack_bound": 4128,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B-tiny",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B",
+  "variant": "tiny",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 177,
+  "stack_frame_kernel": 6848,
+  "stack_bound": 6848,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B_AES-mem",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B_AES",
+  "variant": "mem",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 254,
+  "stack_frame_kernel": 307888,
+  "stack_bound": 307888,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [
+   "first_time",
+   "fixedAm",
+   "fixedBm",
+   "fixed_abq",
+   "fixedq1",
+   "fixedq2"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B_AES-opt",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B_AES",
+  "variant": "opt",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 153,
+  "stack_frame_kernel": 291192,
+  "stack_bound": 291192,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [
+   "first_time",
+   "fixed_abq",
+   "gen_fixed_ABQ.first",
+   "gf_S",
+   "gf_addtab",
+   "gf_multtab"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B_AES-ref",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B_AES",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 205,
+  "stack_frame_kernel": 4440,
+  "stack_bound": 4440,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_B_AES-tiny",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_B_AES",
+  "variant": "tiny",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 8176,
+  "stack_bound": 8176,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K-mem",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K",
+  "variant": "mem",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 254,
+  "stack_frame_kernel": 340976,
+  "stack_bound": 340976,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [
+   "first_time",
+   "fixedAm",
+   "fixedBm",
+   "fixed_abq",
+   "fixedq1",
+   "fixedq2"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K-opt",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K",
+  "variant": "opt",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 152,
+  "stack_frame_kernel": 321536,
+  "stack_bound": 321536,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [
+   "first_time",
+   "fixed_abq",
+   "gen_fixed_ABQ.first",
+   "gf_S",
+   "gf_addtab",
+   "gf_multtab"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K-ref",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 5720,
+  "stack_bound": 5720,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K-tiny",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K",
+  "variant": "tiny",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 242,
+  "stack_frame_kernel": 8928,
+  "stack_bound": 8928,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K_AES-mem",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K_AES",
+  "variant": "mem",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 254,
+  "stack_frame_kernel": 341008,
+  "stack_bound": 341008,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [
+   "first_time",
+   "fixedAm",
+   "fixedBm",
+   "fixed_abq",
+   "fixedq1",
+   "fixedq2"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K_AES-opt",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K_AES",
+  "variant": "opt",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 153,
+  "stack_frame_kernel": 321536,
+  "stack_bound": 321536,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [
+   "first_time",
+   "fixed_abq",
+   "gen_fixed_ABQ.first",
+   "gf_S",
+   "gf_addtab",
+   "gf_multtab"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K_AES-ref",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K_AES",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 214,
+  "stack_frame_kernel": 5976,
+  "stack_bound": 5976,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_K_AES-tiny",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_K_AES",
+  "variant": "tiny",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 4304,
+  "stack_bound": 4304,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S-mem",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S",
+  "variant": "mem",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 303760,
+  "stack_bound": 303760,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [
+   "first_time",
+   "fixedAm",
+   "fixedBm",
+   "fixed_abq",
+   "fixedq1",
+   "fixedq2"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S-opt",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S",
+  "variant": "opt",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 145,
+  "stack_frame_kernel": 296616,
+  "stack_bound": 296616,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [
+   "first_time",
+   "fixed_abq",
+   "gen_fixed_ABQ.first",
+   "gf_S",
+   "gf_addtab",
+   "gf_multtab"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S-ref",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 170,
+  "stack_frame_kernel": 2872,
+  "stack_bound": 2872,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S-tiny",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S",
+  "variant": "tiny",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 201,
+  "stack_frame_kernel": 5184,
+  "stack_bound": 5184,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S_AES-mem",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S_AES",
+  "variant": "mem",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 168,
+  "stack_frame_kernel": 303792,
+  "stack_bound": 303792,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [
+   "first_time",
+   "fixedAm",
+   "fixedBm",
+   "fixed_abq",
+   "fixedq1",
+   "fixedq2"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S_AES-opt",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S_AES",
+  "variant": "opt",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 160,
+  "stack_frame_kernel": 296616,
+  "stack_bound": 296616,
+  "stack_dynamic": false,
+  "functions_not_inlined": 5,
+  "mutable_globals": [
+   "first_time",
+   "fixed_abq",
+   "gen_fixed_ABQ.first",
+   "gf_S",
+   "gf_addtab",
+   "gf_multtab"
+  ],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S_AES-ref",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S_AES",
+  "variant": "ref",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 180,
+  "stack_frame_kernel": 3224,
+  "stack_bound": 3224,
+  "stack_dynamic": false,
+  "functions_not_inlined": 4,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "snova-SNOVA_I_S_AES-tiny",
+  "scheme": "SNOVA",
+  "param": "SNOVA_I_S_AES",
+  "variant": "tiny",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "unresolved_symbols",
+  "unresolved": [
+   "fp2_add",
+   "fp2_add_one",
+   "fp2_copy",
+   "fp2_cswap",
+   "fp2_decode",
+   "fp2_encode",
+   "fp2_half",
+   "fp2_inv",
+   "fp2_is_equal",
+   "fp2_is_one",
+   "fp2_is_square",
+   "fp2_is_zero",
+   "fp2_mul",
+   "fp2_mul_small",
+   "fp2_neg",
+   "fp2_set_one",
+   "fp2_set_zero",
+   "fp2_sqr",
+   "fp2_sqrt",
+   "fp2_sub",
+   "ibz_cmp",
+   "ibz_copy",
+   "ibz_copy_bits",
+   "ibz_copy_digits",
+   "ibz_div_2exp",
+   "ibz_is_odd",
+   "ibz_is_one",
+   "ibz_is_positive",
+   "ibz_is_zero",
+   "ibz_mul_2exp",
+   "ibz_sub",
+   "ibz_swap",
+   "iso_isogeny_2chain",
+   "theta_chain_compute_and_eval_verify"
+  ],
+  "missing_bitcode": [
+   {
+    "object": "002_biextension.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/biextension.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/002_biextension.o.nvbc.log"
+   },
+   {
+    "object": "011_encode_secret.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/encode_secret.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/011_encode_secret.o.nvbc.log"
+   },
+   {
+    "object": "015_fp2.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/fp2.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/015_fp2.o.nvbc.log"
+   },
+   {
+    "object": "018_gluing.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/gluing.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/018_gluing.o.nvbc.log"
+   },
+   {
+    "object": "023_isog.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/isog.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/023_isog.o.nvbc.log"
+   },
+   {
+    "object": "032_mp.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/mp.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/032_mp.o.nvbc.log"
+   },
+   {
+    "object": "043_theta_isogenies.o",
+    "source": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/src/theta_isogenies.c",
+    "log": "~/pqsig-eval/build/gpu/sqisign-p324_3-ref-portable/obj/043_theta_isogenies.o.nvbc.log"
+   }
+  ],
+  "recipe": "sqisign-p324_3-ref-portable",
+  "scheme": "SQIsign",
+  "param": "p324_3",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 128,
+  "stack_frame_kernel": 4784,
+  "stack_bound": 4784,
+  "stack_dynamic": false,
+  "functions_not_inlined": 2,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "uov-Ip-ref-portable",
+  "scheme": "UOV",
+  "param": "Ip",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 124,
+  "stack_frame_kernel": 4784,
+  "stack_bound": 4784,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "uov-Ip_pkc-ref-portable",
+  "scheme": "UOV",
+  "param": "Ip_pkc",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 124,
+  "stack_frame_kernel": 4784,
+  "stack_bound": 4784,
+  "stack_dynamic": false,
+  "functions_not_inlined": 3,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "uov-Ip_pkc_skc-ref-portable",
+  "scheme": "UOV",
+  "param": "Ip_pkc_skc",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 186,
+  "stack_frame_kernel": 848,
+  "stack_bound": 848,
+  "stack_dynamic": false,
+  "functions_not_inlined": 1,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "uov-Is-ref-portable",
+  "scheme": "UOV",
+  "param": "Is",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 135,
+  "stack_frame_kernel": 1232,
+  "stack_bound": 1232,
+  "stack_dynamic": false,
+  "functions_not_inlined": 1,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "uov-Is_pkc-ref-portable",
+  "scheme": "UOV",
+  "param": "Is_pkc",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ },
+ {
+  "status": "ok",
+  "registers": 135,
+  "stack_frame_kernel": 1232,
+  "stack_bound": 1232,
+  "stack_dynamic": false,
+  "functions_not_inlined": 1,
+  "mutable_globals": [],
+  "missing_bitcode_unused": [],
+  "recipe": "uov-Is_pkc_skc-ref-portable",
+  "scheme": "UOV",
+  "param": "Is_pkc_skc",
+  "variant": "ref-portable",
+  "tools": {
+   "clang": "Ubuntu clang version 18.1.3 (1ubuntu1)",
+   "ptxas": "Build cuda_13.2.r13.2/compiler.37953736_0",
+   "sm": "sm_120"
+  }
+ }
+]

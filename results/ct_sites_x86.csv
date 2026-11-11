@@ -1,0 +1,26 @@
+recipe,memcheck_contexts_pc1,main_sites,class,reason
+ed25519-ref,0,-,none,no report
+ecdsa-p256-ref,16,uECC_vli_mmod; muladd; vli_numDigits/numBits,secret-dependent,micro-ecc modular arithmetic branches and indexes on secret scalars
+mldsa-44-ref,9,rej_uniform; poly_challenge; chknorm; make_hint; pack_sig,public-by-design,rejection decisions and values that the signature reveals; rho is public but stored in sk
+fndsa-512-ref,66,trim_i8_decode; sampler; sign_step1; comp_encode,public-by-design,key decoding range checks; sampler rejection; signature encoding
+fndsa-512-opt,66,as fndsa-512-ref,public-by-design,same sites as the reference build
+faest-faest_128s-ref,17,bavc_open; pos_in_tree; faest_sign,public-by-design,commitment opening at challenge positions; challenge grinding
+faest-faest_128s-opt-avx2,17,as faest_128s-ref,public-by-design,same sites
+mqom-cat1_gf16_short_ct-ref,1000 (cap),aes128_table_enc; aes128_table_setkey_enc,secret-dependent,T-table AES on secret seeds (cache-timing risk); opt variants use AES-NI
+mqom-cat1_gf16_short_ct-opt-avx2,14,Sign_default retry; SmallGGMTree_Open; CT_BLC_Open,public-by-design,signing retry and tree opening at challenge positions; first PC 1 run stopped in the harness DRBG (AVX-512 encoding)
+mqom-cat1_gf16_short_ct-opt-avx512,not run,-,not checkable,AVX-512
+sdith-cat1_short-ref,228,rijndaelEncrypt; rijndaelKeySetupEnc; ggm tree opening; proof-of-work grind,secret-dependent,T-table AES on secret seeds; the other sites are challenge-derived (public)
+sdith-cat1_short-opt-avx2,20,ggm tree opening; partition; estimate_topen; proofow grind; bitvec_is_zero_nonct,public-by-design,challenge-derived indices and proof-of-work
+uov-Ip_pkc-ref-portable,1,ov_sign_core (ov.c:150),public-by-design,retry when the linear system is singular; declassified by the team under _VALGRIND_
+uov-Ip_pkc-opt-avx2,1,ov_sign_core retry,public-by-design,same retry branch
+uov-Ip_pkc-opt-gfni,not run,-,not checkable,GFNI
+mayo-MAYO_1-ref,1,sample_solution (arithmetic.c:86),public-by-design,retry when not full rank; declassified by the team under ENABLE_CT_TESTING
+mayo-MAYO_1-opt-avx2,1,sample_solution retry,public-by-design,same retry branch
+mayo-MAYO_1-opt-gfni,not run,-,not checkable,GFNI
+qruov-1q127L10-aes-opt-portable,19,linsys_lu_decompose (pivot search); gf_inv table; gf_mul; rejection sample; canonicalize_s,secret-dependent,variable-time Gaussian elimination and table inversion indexed by secret pivots; matches fixvsrand |t|=206
+qruov-1q127L10-aes-opt-avx2,134,linsys_lu_decompose; gf_inv; gf_mul; vpshufb; rejection sample,secret-dependent,same solver as opt-portable; vpshufb reports are register shuffles (tool artefact)
+snova-SNOVA_I_K-opt,2,sign retry (snova_opt_16.c:1343); crypto_sign return,public-by-design,retry decision
+snova-SNOVA_I_K-opt-avx2,18,vpshufb; rct_sign retry,public-by-design,vpshufb is a register shuffle (tool artefact); retry decision
+slhdsa-sha2-128s-ref,11,sha2_256_chain; fors/xmss pk_from_sig,public-by-design,WOTS chain lengths and tree paths come from the message digest
+sqisign-p324_3-ref-portable,1000 (cap),ibz_mod; ibz_div; ibz_gcd; ibz_invmod; mp_* big-integer routines,secret-dependent,variable-time big-integer arithmetic on secret ideals
+sqisign-p324_3-opt-broadwell,1000 (cap),sqisign_gen_ibz_mod; ibz_gcd; ibz_div; mp_lehmer_*; mp_mul_small_signed,secret-dependent,same variable-time big-integer routines as the reference build; first run had stopped in the harness DRBG

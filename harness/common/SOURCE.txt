@@ -1,0 +1,5 @@
+mupq commit 981df31b84585df097333a9d2319ec0d6e357fee (Fri Oct 23 11:41:08 2026 -0400)
+Files copied unchanged from https://github.com/mupq/mupq/tree/master/common. Each file keeps its SPDX licence header. hal.h is needed only for the optional PROFILE_HASHING hooks, which this harness never enables.
+
+pqsig-eval change to aes.c/aes.h (taken from https://github.com/PQClean/PQClean/tree/master/common, MIT licence, Thomas Pornin): the expanded key is stored inside the context instead of on the heap; ctx_release does nothing. The cipher code is unchanged.
+PQClean commit 0586a824fc0d49df0b6b6e9179d8d15d06d0974f (Tue Aug 4 08:48:51 2026 +0200)

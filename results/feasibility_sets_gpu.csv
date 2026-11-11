@@ -1,0 +1,74 @@
+recipe,scheme,param,variant,status,limit,detail
+ecdsa-p256-ref,ECDSA,P-256,ref,runs,,largest batch 65536
+ed25519-ref,Ed25519,Ed25519,ref,runs,,largest batch 65536
+faest-faest_128f-ref,FAEST,faest_128f,ref,runs,,largest batch 65536
+faest-faest_128s-ref,FAEST,faest_128s,ref,runs,,largest batch 16384
+faest-faest_em_128f-ref,FAEST,faest_em_128f,ref,runs,,largest batch 65536
+faest-faest_em_128s-ref,FAEST,faest_em_128s,ref,runs,,largest batch 64
+fndsa-512-ref,FN-DSA,FN-DSA-512,ref,runs,,largest batch 65536
+mayo-MAYO_1-ref,MAYO,MAYO_1,ref,no run,stack,needs 746 KB per thread for every resident thread
+mayo-MAYO_2-ref,MAYO,MAYO_2,ref,no run,stack,needs 350 KB per thread for every resident thread
+mldsa-44-ref,ML-DSA,ML-DSA-44,ref,runs,,largest batch 65536
+mqom-cat1_gf16_fast_ct-ref,MQOM,cat1_gf16_fast_ct,ref,runs,,largest batch 65536; shared globals: mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr23;mqom_cleanse.mqom_memset_ptr5
+mqom-cat1_gf16_fast_ot-ref,MQOM,cat1_gf16_fast_ot,ref,runs,,largest batch 65536; shared globals: mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr25;mqom_cleanse.mqom_memset_ptr5
+mqom-cat1_gf16_short_ct-ref,MQOM,cat1_gf16_short_ct,ref,runs,,largest batch 65536; shared globals: mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr23;mqom_cleanse.mqom_memset_ptr5
+mqom-cat1_gf16_short_ot-ref,MQOM,cat1_gf16_short_ot,ref,runs,,largest batch 65536; shared globals: mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr25;mqom_cleanse.mqom_memset_ptr5
+mqom-cat1_gf2_shorter_ct-ref,MQOM,cat1_gf2_shorter_ct,ref,runs,,largest batch 65536; shared globals: mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr23;mqom_cleanse.mqom_memset_ptr5
+mqom-cat1_gf2_shorter_ot-ref,MQOM,cat1_gf2_shorter_ot,ref,runs,,largest batch 65536; shared globals: mqom_cleanse.mqom_memset_ptr16;mqom_cleanse.mqom_memset_ptr25;mqom_cleanse.mqom_memset_ptr5
+qruov-1q127L10-aes-opt-portable,QR-UOV,1q127L10-aes,opt-portable,runs,,largest batch 65536
+qruov-1q127L10-aes-ref-portable,QR-UOV,1q127L10-aes,ref-portable,runs,,largest batch 65536
+qruov-1q127L10-shake-opt-portable,QR-UOV,1q127L10-shake,opt-portable,runs,,largest batch 65536
+qruov-1q127L10-shake-ref-portable,QR-UOV,1q127L10-shake,ref-portable,runs,,largest batch 65536
+qruov-1q127L3-aes-opt-portable,QR-UOV,1q127L3-aes,opt-portable,runs,,largest batch 65536
+qruov-1q127L3-aes-ref-portable,QR-UOV,1q127L3-aes,ref-portable,runs,,largest batch 65536
+qruov-1q127L3-shake-opt-portable,QR-UOV,1q127L3-shake,opt-portable,runs,,largest batch 65536
+qruov-1q127L3-shake-ref-portable,QR-UOV,1q127L3-shake,ref-portable,runs,,largest batch 65536
+qruov-1q31L10-aes-opt-portable,QR-UOV,1q31L10-aes,opt-portable,runs,,largest batch 65536
+qruov-1q31L10-aes-ref-portable,QR-UOV,1q31L10-aes,ref-portable,runs,,largest batch 65536
+qruov-1q31L10-shake-opt-portable,QR-UOV,1q31L10-shake,opt-portable,runs,,largest batch 65536
+qruov-1q31L10-shake-ref-portable,QR-UOV,1q31L10-shake,ref-portable,runs,,largest batch 65536
+qruov-1q31L3-aes-opt-portable,QR-UOV,1q31L3-aes,opt-portable,runs,,largest batch 65536
+qruov-1q31L3-aes-ref-portable,QR-UOV,1q31L3-aes,ref-portable,runs,,largest batch 65536
+qruov-1q31L3-shake-opt-portable,QR-UOV,1q31L3-shake,opt-portable,runs,,largest batch 65536
+qruov-1q31L3-shake-ref-portable,QR-UOV,1q31L3-shake,ref-portable,runs,,largest batch 65536
+qruov-1q7L10-aes-opt-portable,QR-UOV,1q7L10-aes,opt-portable,runs,,largest batch 65536
+qruov-1q7L10-aes-ref-portable,QR-UOV,1q7L10-aes,ref-portable,runs,,largest batch 65536
+qruov-1q7L10-shake-opt-portable,QR-UOV,1q7L10-shake,opt-portable,runs,,largest batch 65536
+qruov-1q7L10-shake-ref-portable,QR-UOV,1q7L10-shake,ref-portable,runs,,largest batch 65536
+sdith-cat1_fast-ref,SDitH,cat1_fast,ref,no run,kernel fault,CUDA_ERROR_MISALIGNED_ADDRESS
+sdith-cat1_fast_cipherpow-ref,SDitH,cat1_fast_cipherpow,ref,no run,kernel fault,CUDA_ERROR_MISALIGNED_ADDRESS
+sdith-cat1_short-ref,SDitH,cat1_short,ref,no run,kernel fault,CUDA_ERROR_MISALIGNED_ADDRESS
+sdith-cat1_short_cipherpow-ref,SDitH,cat1_short_cipherpow,ref,no run,kernel fault,CUDA_ERROR_MISALIGNED_ADDRESS
+slhdsa-sha2-128f-ref,SLH-DSA,SLH-DSA-SHA2-128f,ref,runs,,largest batch 65536
+slhdsa-sha2-128s-ref,SLH-DSA,SLH-DSA-SHA2-128s,ref,runs,,largest batch 65536
+snova-SNOVA_I_B-mem,SNOVA,SNOVA_I_B,mem,no run,wrong results,valid signatures rejected on the GPU
+snova-SNOVA_I_B-opt,SNOVA,SNOVA_I_B,opt,no run,stack,needs 300 KB per thread for every resident thread
+snova-SNOVA_I_B-ref,SNOVA,SNOVA_I_B,ref,no run,stack,needs 284 KB per thread for every resident thread
+snova-SNOVA_I_B-tiny,SNOVA,SNOVA_I_B,tiny,no run,wrong results,valid signatures rejected on the GPU
+snova-SNOVA_I_B_AES-mem,SNOVA,SNOVA_I_B_AES,mem,runs,,largest batch 65536
+snova-SNOVA_I_B_AES-opt,SNOVA,SNOVA_I_B_AES,opt,no run,stack,needs 300 KB per thread for every resident thread
+snova-SNOVA_I_B_AES-ref,SNOVA,SNOVA_I_B_AES,ref,no run,stack,needs 284 KB per thread for every resident thread
+snova-SNOVA_I_B_AES-tiny,SNOVA,SNOVA_I_B_AES,tiny,runs,,largest batch 65536
+snova-SNOVA_I_K-mem,SNOVA,SNOVA_I_K,mem,no run,wrong results,valid signatures rejected on the GPU
+snova-SNOVA_I_K-opt,SNOVA,SNOVA_I_K,opt,no run,stack,needs 332 KB per thread for every resident thread
+snova-SNOVA_I_K-ref,SNOVA,SNOVA_I_K,ref,no run,stack,needs 314 KB per thread for every resident thread
+snova-SNOVA_I_K-tiny,SNOVA,SNOVA_I_K,tiny,no run,wrong results,valid signatures rejected on the GPU
+snova-SNOVA_I_K_AES-mem,SNOVA,SNOVA_I_K_AES,mem,runs,,largest batch 65536
+snova-SNOVA_I_K_AES-opt,SNOVA,SNOVA_I_K_AES,opt,no run,stack,needs 333 KB per thread for every resident thread
+snova-SNOVA_I_K_AES-ref,SNOVA,SNOVA_I_K_AES,ref,no run,stack,needs 314 KB per thread for every resident thread
+snova-SNOVA_I_K_AES-tiny,SNOVA,SNOVA_I_K_AES,tiny,runs,,largest batch 65536
+snova-SNOVA_I_S-mem,SNOVA,SNOVA_I_S,mem,no run,wrong results,valid signatures rejected on the GPU
+snova-SNOVA_I_S-opt,SNOVA,SNOVA_I_S,opt,no run,stack,needs 296 KB per thread for every resident thread
+snova-SNOVA_I_S-ref,SNOVA,SNOVA_I_S,ref,no run,stack,needs 289 KB per thread for every resident thread
+snova-SNOVA_I_S-tiny,SNOVA,SNOVA_I_S,tiny,no run,wrong results,valid signatures rejected on the GPU
+snova-SNOVA_I_S_AES-mem,SNOVA,SNOVA_I_S_AES,mem,runs,,largest batch 65536
+snova-SNOVA_I_S_AES-opt,SNOVA,SNOVA_I_S_AES,opt,no run,stack,needs 296 KB per thread for every resident thread
+snova-SNOVA_I_S_AES-ref,SNOVA,SNOVA_I_S_AES,ref,no run,stack,needs 289 KB per thread for every resident thread
+snova-SNOVA_I_S_AES-tiny,SNOVA,SNOVA_I_S_AES,tiny,runs,,largest batch 65536
+sqisign-p324_3-ref-portable,SQIsign,p324_3,ref-portable,no build,VLA,36 variable-length arrays; PTX has no dynamic stack allocation
+uov-Ip-ref-portable,UOV,Ip,ref-portable,runs,,largest batch 65536
+uov-Ip_pkc-ref-portable,UOV,Ip_pkc,ref-portable,runs,,largest batch 65536
+uov-Ip_pkc_skc-ref-portable,UOV,Ip_pkc_skc,ref-portable,runs,,largest batch 65536
+uov-Is-ref-portable,UOV,Is,ref-portable,runs,,largest batch 65536
+uov-Is_pkc-ref-portable,UOV,Is_pkc,ref-portable,runs,,largest batch 65536
+uov-Is_pkc_skc-ref-portable,UOV,Is_pkc_skc,ref-portable,runs,,largest batch 65536

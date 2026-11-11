@@ -1,0 +1,126 @@
+{
+ "note": "One Category 1 set per scheme for Tables V and VI; every other set goes to the supplementary CSV. On each platform the variant is the fastest submitted implementation that runs there (x86: GFNI for UOV and MAYO, AVX-512 for MQOM, measured). These are provisional choices made for the first draft so the tables compile; the authors confirm or change them after the Category 1 runs. 'variant' names the recipe variant per platform; 'default' applies where a platform is not listed. 'recipe_gpu' is the portable recipe run on the GPU (Table VIII); SQIsign has none (variable-length arrays).",
+ "sets": {
+  "FAEST": {
+   "param": "faest_128s",
+   "variant": {
+    "default": "ref",
+    "x86": "opt-avx2",
+    "pi5": "opt-neon"
+   },
+   "recipe_esp32": "faest-faest_128s-ref",
+   "recipe_gpu": "faest-faest_128s-ref"
+  },
+  "MQOM": {
+   "param": "cat1_gf16_short_ct",
+   "variant": {
+    "default": "ref",
+    "x86": "opt-avx512",
+    "pi5": "opt-neon"
+   },
+   "recipe_esp32": "mqom-cat1_gf16_short_ct-ref",
+   "recipe_gpu": "mqom-cat1_gf16_short_ct-ref"
+  },
+  "SDitH": {
+   "param": "cat1_short",
+   "variant": {
+    "default": "ref",
+    "x86": "opt-avx2"
+   },
+   "recipe_esp32": "sdith-cat1_short-ref",
+   "recipe_gpu": "sdith-cat1_short-ref"
+  },
+  "UOV": {
+   "param": "Ip_pkc",
+   "variant": {
+    "default": "ref-portable",
+    "x86": "opt-gfni",
+    "pi5": "opt-neon"
+   },
+   "recipe_esp32": "uov-Ip_pkc-ref-portable",
+   "recipe_gpu": "uov-Ip_pkc-ref-portable"
+  },
+  "MAYO": {
+   "param": "MAYO_1",
+   "variant": {
+    "default": "ref",
+    "x86": "opt-gfni",
+    "pi5": "opt-neon"
+   },
+   "recipe_esp32": "mayo-MAYO_1-ref",
+   "recipe_gpu": "mayo-MAYO_1-ref"
+  },
+  "QR-UOV": {
+   "param": "1q127L10-aes",
+   "variant": {
+    "default": "opt-portable",
+    "x86": "opt-avx2",
+    "pi5": "opt-portable"
+   },
+   "recipe_esp32": "qruov-1q127L10-aes-opt-portable",
+   "recipe_gpu": "qruov-1q127L10-aes-opt-portable"
+  },
+  "SNOVA": {
+   "param": "SNOVA_I_K",
+   "variant": {
+    "default": "opt",
+    "x86": "opt-avx2",
+    "esp32": "mem"
+   },
+   "recipe_esp32": "snova-SNOVA_I_K-mem",
+   "recipe_gpu": "snova-SNOVA_I_K_AES-mem",
+   "note_gpu": "SHAKE versions reject every valid signature on the GPU; the AES version of the same parameter set is used"
+  },
+  "SQIsign": {
+   "param": "p324_3",
+   "variant": {
+    "default": "ref-portable",
+    "x86": "opt-broadwell",
+    "pi5": "opt-arm64"
+   },
+   "recipe_esp32": "sqisign-p324_3-ref-portable"
+  },
+  "ML-DSA": {
+   "param": "ML-DSA-44",
+   "variant": {
+    "default": "ref"
+   },
+   "recipe_esp32": "mldsa-44-ref",
+   "recipe_gpu": "mldsa-44-ref"
+  },
+  "FN-DSA": {
+   "param": "FN-DSA-512",
+   "variant": {
+    "default": "ref",
+    "pi5": "opt",
+    "x86": "opt"
+   },
+   "recipe_esp32": "fndsa-512-ref",
+   "recipe_gpu": "fndsa-512-ref"
+  },
+  "SLH-DSA": {
+   "param": "SLH-DSA-SHA2-128s",
+   "variant": {
+    "default": "ref"
+   },
+   "recipe_esp32": "slhdsa-sha2-128s-ref",
+   "recipe_gpu": "slhdsa-sha2-128s-ref"
+  },
+  "Ed25519": {
+   "param": "Ed25519",
+   "variant": {
+    "default": "ref"
+   },
+   "recipe_esp32": "ed25519-ref",
+   "recipe_gpu": "ed25519-ref"
+  },
+  "ECDSA": {
+   "param": "P-256",
+   "variant": {
+    "default": "ref"
+   },
+   "recipe_esp32": "ecdsa-p256-ref",
+   "recipe_gpu": "ecdsa-p256-ref"
+  }
+ }
+}

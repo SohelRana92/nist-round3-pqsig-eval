@@ -1,0 +1,5 @@
+recipe,platform,text,data,bss
+fndsa-512-opt,x86,279175,0,0
+fndsa-512-ref,x86,193411,0,0
+mayo-MAYO_1-opt-gfni,x86,111553,8,20
+mqom-cat1_gf16_short_ct-opt-avx2,x86,631332,136,144

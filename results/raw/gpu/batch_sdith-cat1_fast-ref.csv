@@ -1,0 +1,10 @@
+GPU_BUILD,SDitH,cat1_fast,ref,registers,255,stack_bound,2640,stack_dynamic,0,mutable_globals,-
+RETRY,kernel,SDitH,cat1_fast,ref,shared,1,chunk,0
+GPU_INFO,SDitH,cat1_fast,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,2640,tpb,128,stack_limit,3664,heap_mb,4096,chunk,0,mem_free_mb,15257,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+ERROR,kernel,CUDA_ERROR_MISALIGNED_ADDRESS,SDitH,cat1_fast,ref,shared,1
+RETRY,kernel,SDitH,cat1_fast,ref,distinct,1,chunk,0
+GPU_INFO,SDitH,cat1_fast,ref,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,255,local_bytes,2640,tpb,128,stack_limit,3664,heap_mb,4096,chunk,0,mem_free_mb,15257,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+ERROR,kernel,CUDA_ERROR_MISALIGNED_ADDRESS,SDitH,cat1_fast,ref,distinct,1
+GPU_DONE,SDitH,cat1_fast,ref

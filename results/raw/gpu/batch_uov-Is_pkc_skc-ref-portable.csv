@@ -1,0 +1,88 @@
+GPU_BUILD,UOV,Is_pkc_skc,ref-portable,registers,135,stack_bound,1232,stack_dynamic,0,mutable_globals,-
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,0,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1,0,76216766,13.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1,1,76213821,13.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1,2,76201920,13.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1,3,76205536,13.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1,4,76198174,13.1,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,shared,1,24736,6528,66744
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,0,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,64,0,96809311,661.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,64,1,96469345,663.4,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,64,2,96832191,660.9,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,64,3,96823486,661.0,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,64,4,96865761,660.7,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,shared,64,24448,6816,77328
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,0,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1024,0,148254181,6907.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1024,1,148107452,6913.9,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1024,2,148390778,6900.7,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1024,3,148307999,6904.6,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,1024,4,148377533,6901.3,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,shared,1024,44288,7168,238608
+RETRY,wrong_results,UOV,Is_pkc_skc,ref-portable,shared,16384,chunk,0
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,2048,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,16384,0,1203019775,13619.1,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,16384,1,1204182983,13605.9,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,16384,2,1202191406,13628.4,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,16384,3,1204642822,13600.7,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,16384,4,1204470825,13602.7,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,shared,16384,330592,7616,2819088
+RETRY,wrong_results,UOV,Is_pkc_skc,ref-portable,shared,65536,chunk,0
+RETRY,wrong_results,UOV,Is_pkc_skc,ref-portable,shared,65536,chunk,16384
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,2048,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,65536,0,4813439941,13615.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,65536,1,4813546387,13614.9,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,65536,2,4811613281,13620.4,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,65536,3,4813555664,13614.9,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,shared,128,65536,4,4813209473,13615.9,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,shared,65536,1280096,23872,11076624
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,0,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1,0,76031105,13.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1,1,76030045,13.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1,2,76014114,13.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1,3,76011230,13.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1,4,76012863,13.2,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,distinct,1,23584,6720,66744
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,0,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,64,0,97574654,655.9,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,64,1,96994240,659.8,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,64,2,97452385,656.7,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,64,3,97445374,656.8,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,64,4,97507233,656.4,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,distinct,64,501824,6496,4271616
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,0,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1024,0,149353210,6856.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1024,1,148682663,6887.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1024,2,148460098,6897.5,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1024,3,149175873,6864.4,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,1024,4,148503006,6895.5,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,distinct,1024,6968064,5664,68345856
+RETRY,wrong_results,UOV,Is_pkc_skc,ref-portable,distinct,16384,chunk,0
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,2048,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,16384,0,1210436646,13535.6,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,16384,1,1209244629,13549.0,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,16384,2,1208913940,13552.7,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,16384,3,1207883789,13564.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,16384,4,1209529419,13545.8,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,distinct,16384,106899651,7712,1093533696
+RETRY,wrong_results,UOV,Is_pkc_skc,ref-portable,distinct,65536,chunk,0
+RETRY,wrong_results,UOV,Is_pkc_skc,ref-portable,distinct,65536,chunk,16384
+GPU_INFO,UOV,Is_pkc_skc,ref-portable,device,NVIDIA GeForce RTX 5070 Ti,sms,70,exec_timeout,1,registers,135,local_bytes,1232,tpb,128,stack_limit,2256,heap_mb,4096,chunk,2048,mem_free_mb,15399,mem_total_mb,15924
+BATCH_HDR,scheme,param,variant,platform,device,mode,threads,batch,rep,ns,verifies_per_s,all_ok
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,65536,0,4836113281,13551.4,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,65536,1,4839116699,13543.0,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,65536,2,4834756836,13555.2,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,65536,3,4835362305,13553.5,1
+BATCH,UOV,Is_pkc_skc,ref-portable,gpu,gpu,distinct,128,65536,4,4835297363,13553.7,1
+GPU_XFER,UOV,Is_pkc_skc,ref-portable,distinct,65536,426129089,28992,4374134784
+GPU_DONE,UOV,Is_pkc_skc,ref-portable

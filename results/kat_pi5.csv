@@ -1,0 +1,322 @@
+recipe,scheme,param,variant,platform,method,status,detail
+ecdsa-p256-ref,ECDSA,P-256,ref,pi5,external,EXTERNAL,tools/checks/ecdsa_crosscheck.py; harness round trip ok
+ed25519-ref,Ed25519,Ed25519,ref,pi5,external,EXTERNAL,tools/checks/ed25519_rfc8032.c; harness round trip ok
+faest-faest_128f-opt-neon,FAEST,faest_128f,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_128f-ref,FAEST,faest_128f,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_128s-opt-neon,FAEST,faest_128s,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_128s-ref,FAEST,faest_128s,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_192f-opt-neon,FAEST,faest_192f,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_192f-ref,FAEST,faest_192f,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_192s-opt-neon,FAEST,faest_192s,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_192s-ref,FAEST,faest_192s,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_256f-opt-neon,FAEST,faest_256f,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_256f-ref,FAEST,faest_256f,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_256s-opt-neon,FAEST,faest_256s,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_256s-ref,FAEST,faest_256s,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_128f-opt-neon,FAEST,faest_em_128f,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_128f-ref,FAEST,faest_em_128f,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_128s-opt-neon,FAEST,faest_em_128s,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_128s-ref,FAEST,faest_em_128s,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_192f-opt-neon,FAEST,faest_em_192f,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_192f-ref,FAEST,faest_em_192f,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_192s-opt-neon,FAEST,faest_em_192s,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_192s-ref,FAEST,faest_em_192s,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_256f-opt-neon,FAEST,faest_em_256f,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_256f-ref,FAEST,faest_em_256f,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_256s-opt-neon,FAEST,faest_em_256s,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+faest-faest_em_256s-ref,FAEST,faest_em_256s,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+fndsa-512-opt,FN-DSA,FN-DSA-512,opt,pi5,upstream_test,PASS,c-fn-dsa test_fndsa (built-in KAT hashes) passed; harness round trip ok
+fndsa-512-ref,FN-DSA,FN-DSA-512,ref,pi5,upstream_test,PASS,c-fn-dsa test_fndsa (built-in KAT hashes) passed; harness round trip ok
+mayo-MAYO_1-opt-neon,MAYO,MAYO_1,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_1-ref,MAYO,MAYO_1,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_2-opt-neon,MAYO,MAYO_2,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_2-ref,MAYO,MAYO_2,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_3-opt-neon,MAYO,MAYO_3,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_3-ref,MAYO,MAYO_3,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_5-opt-neon,MAYO,MAYO_5,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mayo-MAYO_5-ref,MAYO,MAYO_5,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mldsa-44-ref,ML-DSA,ML-DSA-44,ref,pi5,pqclean,PASS,PQClean nistkat-sha256 matches
+mqom-cat1_gf16_fast_ct-opt-neon,MQOM,cat1_gf16_fast_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_fast_ct-ref,MQOM,cat1_gf16_fast_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_fast_ot-opt-neon,MQOM,cat1_gf16_fast_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_fast_ot-ref,MQOM,cat1_gf16_fast_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_short_ct-opt-neon,MQOM,cat1_gf16_short_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_short_ct-ref,MQOM,cat1_gf16_short_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_short_ot-opt-neon,MQOM,cat1_gf16_short_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf16_short_ot-ref,MQOM,cat1_gf16_short_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf2_shorter_ct-opt-neon,MQOM,cat1_gf2_shorter_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf2_shorter_ct-ref,MQOM,cat1_gf2_shorter_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf2_shorter_ot-opt-neon,MQOM,cat1_gf2_shorter_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat1_gf2_shorter_ot-ref,MQOM,cat1_gf2_shorter_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_fast_ct-opt-neon,MQOM,cat3_gf16_fast_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_fast_ct-ref,MQOM,cat3_gf16_fast_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_fast_ot-opt-neon,MQOM,cat3_gf16_fast_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_fast_ot-ref,MQOM,cat3_gf16_fast_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_short_ct-opt-neon,MQOM,cat3_gf16_short_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_short_ct-ref,MQOM,cat3_gf16_short_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_short_ot-opt-neon,MQOM,cat3_gf16_short_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf16_short_ot-ref,MQOM,cat3_gf16_short_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf2_shorter_ct-opt-neon,MQOM,cat3_gf2_shorter_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf2_shorter_ct-ref,MQOM,cat3_gf2_shorter_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf2_shorter_ot-opt-neon,MQOM,cat3_gf2_shorter_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat3_gf2_shorter_ot-ref,MQOM,cat3_gf2_shorter_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_fast_ct-opt-neon,MQOM,cat5_gf16_fast_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_fast_ct-ref,MQOM,cat5_gf16_fast_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_fast_ot-opt-neon,MQOM,cat5_gf16_fast_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_fast_ot-ref,MQOM,cat5_gf16_fast_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_short_ct-opt-neon,MQOM,cat5_gf16_short_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_short_ct-ref,MQOM,cat5_gf16_short_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_short_ot-opt-neon,MQOM,cat5_gf16_short_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf16_short_ot-ref,MQOM,cat5_gf16_short_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf2_shorter_ct-opt-neon,MQOM,cat5_gf2_shorter_ct,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf2_shorter_ct-ref,MQOM,cat5_gf2_shorter_ct,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf2_shorter_ot-opt-neon,MQOM,cat5_gf2_shorter_ot,opt-neon,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+mqom-cat5_gf2_shorter_ot-ref,MQOM,cat5_gf2_shorter_ot,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+qruov-1q127L10-aes-opt-nist,QR-UOV,1q127L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-aes-opt-portable,QR-UOV,1q127L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-aes-ref-nist,QR-UOV,1q127L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-aes-ref-portable,QR-UOV,1q127L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-shake-opt-nist,QR-UOV,1q127L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-shake-opt-portable,QR-UOV,1q127L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-shake-ref-nist,QR-UOV,1q127L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L10-shake-ref-portable,QR-UOV,1q127L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-aes-opt-nist,QR-UOV,1q127L3-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-aes-opt-portable,QR-UOV,1q127L3-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-aes-ref-nist,QR-UOV,1q127L3-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-aes-ref-portable,QR-UOV,1q127L3-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-shake-opt-nist,QR-UOV,1q127L3-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-shake-opt-portable,QR-UOV,1q127L3-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-shake-ref-nist,QR-UOV,1q127L3-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q127L3-shake-ref-portable,QR-UOV,1q127L3-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-aes-opt-nist,QR-UOV,1q31L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-aes-opt-portable,QR-UOV,1q31L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-aes-ref-nist,QR-UOV,1q31L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-aes-ref-portable,QR-UOV,1q31L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-shake-opt-nist,QR-UOV,1q31L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-shake-opt-portable,QR-UOV,1q31L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-shake-ref-nist,QR-UOV,1q31L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L10-shake-ref-portable,QR-UOV,1q31L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-aes-opt-nist,QR-UOV,1q31L3-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-aes-opt-portable,QR-UOV,1q31L3-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-aes-ref-nist,QR-UOV,1q31L3-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-aes-ref-portable,QR-UOV,1q31L3-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-shake-opt-nist,QR-UOV,1q31L3-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-shake-opt-portable,QR-UOV,1q31L3-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-shake-ref-nist,QR-UOV,1q31L3-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q31L3-shake-ref-portable,QR-UOV,1q31L3-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-aes-opt-nist,QR-UOV,1q7L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-aes-opt-portable,QR-UOV,1q7L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-aes-ref-nist,QR-UOV,1q7L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-aes-ref-portable,QR-UOV,1q7L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-shake-opt-nist,QR-UOV,1q7L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-shake-opt-portable,QR-UOV,1q7L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-shake-ref-nist,QR-UOV,1q7L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-1q7L10-shake-ref-portable,QR-UOV,1q7L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-aes-opt-nist,QR-UOV,3q127L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-aes-opt-portable,QR-UOV,3q127L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-aes-ref-nist,QR-UOV,3q127L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-aes-ref-portable,QR-UOV,3q127L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-shake-opt-nist,QR-UOV,3q127L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-shake-opt-portable,QR-UOV,3q127L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-shake-ref-nist,QR-UOV,3q127L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L10-shake-ref-portable,QR-UOV,3q127L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-aes-opt-nist,QR-UOV,3q127L3-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-aes-opt-portable,QR-UOV,3q127L3-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-aes-ref-nist,QR-UOV,3q127L3-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-aes-ref-portable,QR-UOV,3q127L3-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-shake-opt-nist,QR-UOV,3q127L3-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-shake-opt-portable,QR-UOV,3q127L3-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-shake-ref-nist,QR-UOV,3q127L3-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q127L3-shake-ref-portable,QR-UOV,3q127L3-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-aes-opt-nist,QR-UOV,3q31L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-aes-opt-portable,QR-UOV,3q31L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-aes-ref-nist,QR-UOV,3q31L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-aes-ref-portable,QR-UOV,3q31L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-shake-opt-nist,QR-UOV,3q31L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-shake-opt-portable,QR-UOV,3q31L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-shake-ref-nist,QR-UOV,3q31L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L10-shake-ref-portable,QR-UOV,3q31L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-aes-opt-nist,QR-UOV,3q31L3-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-aes-opt-portable,QR-UOV,3q31L3-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-aes-ref-nist,QR-UOV,3q31L3-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-aes-ref-portable,QR-UOV,3q31L3-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-shake-opt-nist,QR-UOV,3q31L3-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-shake-opt-portable,QR-UOV,3q31L3-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-shake-ref-nist,QR-UOV,3q31L3-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q31L3-shake-ref-portable,QR-UOV,3q31L3-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-aes-opt-nist,QR-UOV,3q7L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-aes-opt-portable,QR-UOV,3q7L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-aes-ref-nist,QR-UOV,3q7L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-aes-ref-portable,QR-UOV,3q7L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-shake-opt-nist,QR-UOV,3q7L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-shake-opt-portable,QR-UOV,3q7L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-shake-ref-nist,QR-UOV,3q7L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-3q7L10-shake-ref-portable,QR-UOV,3q7L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-aes-opt-nist,QR-UOV,5q127L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-aes-opt-portable,QR-UOV,5q127L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-aes-ref-nist,QR-UOV,5q127L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-aes-ref-portable,QR-UOV,5q127L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-shake-opt-nist,QR-UOV,5q127L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-shake-opt-portable,QR-UOV,5q127L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-shake-ref-nist,QR-UOV,5q127L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L10-shake-ref-portable,QR-UOV,5q127L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-aes-opt-nist,QR-UOV,5q127L3-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-aes-opt-portable,QR-UOV,5q127L3-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-aes-ref-nist,QR-UOV,5q127L3-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-aes-ref-portable,QR-UOV,5q127L3-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-shake-opt-nist,QR-UOV,5q127L3-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-shake-opt-portable,QR-UOV,5q127L3-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-shake-ref-nist,QR-UOV,5q127L3-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q127L3-shake-ref-portable,QR-UOV,5q127L3-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-aes-opt-nist,QR-UOV,5q31L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-aes-opt-portable,QR-UOV,5q31L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-aes-ref-nist,QR-UOV,5q31L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-aes-ref-portable,QR-UOV,5q31L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-shake-opt-nist,QR-UOV,5q31L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-shake-opt-portable,QR-UOV,5q31L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-shake-ref-nist,QR-UOV,5q31L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L10-shake-ref-portable,QR-UOV,5q31L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-aes-opt-nist,QR-UOV,5q31L3-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-aes-opt-portable,QR-UOV,5q31L3-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-aes-ref-nist,QR-UOV,5q31L3-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-aes-ref-portable,QR-UOV,5q31L3-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-shake-opt-nist,QR-UOV,5q31L3-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-shake-opt-portable,QR-UOV,5q31L3-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-shake-ref-nist,QR-UOV,5q31L3-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q31L3-shake-ref-portable,QR-UOV,5q31L3-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-aes-opt-nist,QR-UOV,5q7L10-aes,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-aes-opt-portable,QR-UOV,5q7L10-aes,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-aes-ref-nist,QR-UOV,5q7L10-aes,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-aes-ref-portable,QR-UOV,5q7L10-aes,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-shake-opt-nist,QR-UOV,5q7L10-shake,opt-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-shake-opt-portable,QR-UOV,5q7L10-shake,opt-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-shake-ref-nist,QR-UOV,5q7L10-shake,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+qruov-5q7L10-shake-ref-portable,QR-UOV,5q7L10-shake,ref-portable,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+sdith-cat1_fast-ref,SDitH,cat1_fast,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat1_fast_cipherpow-ref,SDitH,cat1_fast_cipherpow,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat1_short-ref,SDitH,cat1_short,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat1_short_cipherpow-ref,SDitH,cat1_short_cipherpow,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat3_fast-ref,SDitH,cat3_fast,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat3_fast_cipherpow-ref,SDitH,cat3_fast_cipherpow,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat3_short-ref,SDitH,cat3_short,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat3_short_cipherpow-ref,SDitH,cat3_short_cipherpow,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat5_fast-ref,SDitH,cat5_fast,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat5_fast_cipherpow-ref,SDitH,cat5_fast_cipherpow,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat5_short-ref,SDitH,cat5_short,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sdith-cat5_short_cipherpow-ref,SDitH,cat5_short_cipherpow,ref,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+slhdsa-sha2-128f-ref,SLH-DSA,SLH-DSA-SHA2-128f,ref,pi5,external,EXTERNAL,slhdsa-c: make test (1248 NIST ACVP vectors); harness round trip ok
+slhdsa-sha2-128s-ref,SLH-DSA,SLH-DSA-SHA2-128s,ref,pi5,external,EXTERNAL,slhdsa-c: make test (1248 NIST ACVP vectors); harness round trip ok
+snova-SNOVA_III_B-mem,SNOVA,SNOVA_III_B,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B-opt,SNOVA,SNOVA_III_B,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B-ref,SNOVA,SNOVA_III_B,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B-tiny,SNOVA,SNOVA_III_B,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B_AES-mem,SNOVA,SNOVA_III_B_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B_AES-opt,SNOVA,SNOVA_III_B_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B_AES-ref,SNOVA,SNOVA_III_B_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_B_AES-tiny,SNOVA,SNOVA_III_B_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K-mem,SNOVA,SNOVA_III_K,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K-opt,SNOVA,SNOVA_III_K,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K-ref,SNOVA,SNOVA_III_K,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K-tiny,SNOVA,SNOVA_III_K,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K_AES-mem,SNOVA,SNOVA_III_K_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K_AES-opt,SNOVA,SNOVA_III_K_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K_AES-ref,SNOVA,SNOVA_III_K_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_K_AES-tiny,SNOVA,SNOVA_III_K_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S-mem,SNOVA,SNOVA_III_S,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S-opt,SNOVA,SNOVA_III_S,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S-ref,SNOVA,SNOVA_III_S,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S-tiny,SNOVA,SNOVA_III_S,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S_AES-mem,SNOVA,SNOVA_III_S_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S_AES-opt,SNOVA,SNOVA_III_S_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S_AES-ref,SNOVA,SNOVA_III_S_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_III_S_AES-tiny,SNOVA,SNOVA_III_S_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B-mem,SNOVA,SNOVA_I_B,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B-opt,SNOVA,SNOVA_I_B,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B-ref,SNOVA,SNOVA_I_B,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B-tiny,SNOVA,SNOVA_I_B,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B_AES-mem,SNOVA,SNOVA_I_B_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B_AES-opt,SNOVA,SNOVA_I_B_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B_AES-ref,SNOVA,SNOVA_I_B_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_B_AES-tiny,SNOVA,SNOVA_I_B_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K-mem,SNOVA,SNOVA_I_K,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K-opt,SNOVA,SNOVA_I_K,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K-ref,SNOVA,SNOVA_I_K,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K-tiny,SNOVA,SNOVA_I_K,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K_AES-mem,SNOVA,SNOVA_I_K_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K_AES-opt,SNOVA,SNOVA_I_K_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K_AES-ref,SNOVA,SNOVA_I_K_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_K_AES-tiny,SNOVA,SNOVA_I_K_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S-mem,SNOVA,SNOVA_I_S,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S-opt,SNOVA,SNOVA_I_S,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S-ref,SNOVA,SNOVA_I_S,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S-tiny,SNOVA,SNOVA_I_S,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S_AES-mem,SNOVA,SNOVA_I_S_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S_AES-opt,SNOVA,SNOVA_I_S_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S_AES-ref,SNOVA,SNOVA_I_S_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_I_S_AES-tiny,SNOVA,SNOVA_I_S_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B-mem,SNOVA,SNOVA_V_B,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B-opt,SNOVA,SNOVA_V_B,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B-ref,SNOVA,SNOVA_V_B,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B-tiny,SNOVA,SNOVA_V_B,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B_AES-mem,SNOVA,SNOVA_V_B_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B_AES-opt,SNOVA,SNOVA_V_B_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B_AES-ref,SNOVA,SNOVA_V_B_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_B_AES-tiny,SNOVA,SNOVA_V_B_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K-mem,SNOVA,SNOVA_V_K,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K-opt,SNOVA,SNOVA_V_K,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K-ref,SNOVA,SNOVA_V_K,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K-tiny,SNOVA,SNOVA_V_K,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K_AES-mem,SNOVA,SNOVA_V_K_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K_AES-opt,SNOVA,SNOVA_V_K_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K_AES-ref,SNOVA,SNOVA_V_K_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_K_AES-tiny,SNOVA,SNOVA_V_K_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S-mem,SNOVA,SNOVA_V_S,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S-opt,SNOVA,SNOVA_V_S,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S-ref,SNOVA,SNOVA_V_S,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S-tiny,SNOVA,SNOVA_V_S,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S_AES-mem,SNOVA,SNOVA_V_S_AES,mem,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S_AES-opt,SNOVA,SNOVA_V_S_AES,opt,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S_AES-ref,SNOVA,SNOVA_V_S_AES,ref,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+snova-SNOVA_V_S_AES-tiny,SNOVA,SNOVA_V_S_AES,tiny,pi5,shake24,PASS,shake24 of 100-vector .rsp matches published value
+sqisign-p324_3-opt-arm64,SQIsign,p324_3,opt-arm64,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sqisign-p324_3-ref-portable,SQIsign,p324_3,ref-portable,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sqisign-p500_27-opt-arm64,SQIsign,p500_27,opt-arm64,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sqisign-p500_27-ref-portable,SQIsign,p500_27,ref-portable,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sqisign-p664_17-opt-arm64,SQIsign,p664_17,opt-arm64,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+sqisign-p664_17-ref-portable,SQIsign,p664_17,ref-portable,pi5,rsp,PASS,"checked 5 KAT vectors, 0 failed"
+uov-III-opt-neon,UOV,III,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-III-ref-nist,UOV,III,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-III-ref-portable,UOV,III,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-III-ref-nist (pi5 build)
+uov-III_pkc-opt-neon,UOV,III_pkc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-III_pkc-ref-nist,UOV,III_pkc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-III_pkc-ref-portable,UOV,III_pkc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-III_pkc-ref-nist (pi5 build)
+uov-III_pkc_skc-opt-neon,UOV,III_pkc_skc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-III_pkc_skc-ref-nist,UOV,III_pkc_skc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-III_pkc_skc-ref-portable,UOV,III_pkc_skc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-III_pkc_skc-ref-nist (pi5 build)
+uov-Ip-opt-neon,UOV,Ip,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Ip-ref-nist,UOV,Ip,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Ip-ref-portable,UOV,Ip,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-Ip-ref-nist (pi5 build)
+uov-Ip_pkc-opt-neon,UOV,Ip_pkc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Ip_pkc-ref-nist,UOV,Ip_pkc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Ip_pkc-ref-portable,UOV,Ip_pkc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-Ip_pkc-ref-nist (pi5 build)
+uov-Ip_pkc_skc-opt-neon,UOV,Ip_pkc_skc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Ip_pkc_skc-ref-nist,UOV,Ip_pkc_skc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Ip_pkc_skc-ref-portable,UOV,Ip_pkc_skc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-Ip_pkc_skc-ref-nist (pi5 build)
+uov-Is-opt-neon,UOV,Is,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Is-ref-nist,UOV,Is,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Is-ref-portable,UOV,Is,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-Is-ref-nist (pi5 build)
+uov-Is_pkc-opt-neon,UOV,Is_pkc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Is_pkc-ref-nist,UOV,Is_pkc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Is_pkc-ref-portable,UOV,Is_pkc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-Is_pkc-ref-nist (pi5 build)
+uov-Is_pkc_skc-opt-neon,UOV,Is_pkc_skc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Is_pkc_skc-ref-nist,UOV,Is_pkc_skc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-Is_pkc_skc-ref-portable,UOV,Is_pkc_skc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-Is_pkc_skc-ref-nist (pi5 build)
+uov-V-opt-neon,UOV,V,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-V-ref-nist,UOV,V,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-V-ref-portable,UOV,V,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-V-ref-nist (pi5 build)
+uov-V_pkc-opt-neon,UOV,V_pkc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-V_pkc-ref-nist,UOV,V_pkc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-V_pkc-ref-portable,UOV,V_pkc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-V_pkc-ref-nist (pi5 build)
+uov-V_pkc_skc-opt-neon,UOV,V_pkc_skc,opt-neon,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-V_pkc_skc-ref-nist,UOV,V_pkc_skc,ref-nist,pi5,sha256,PASS,sha256 of 100-vector .rsp matches published value
+uov-V_pkc_skc-ref-portable,UOV,V_pkc_skc,ref-portable,pi5,compare_recipe,PASS,5 vectors identical to uov-V_pkc_skc-ref-nist (pi5 build)
