@@ -5,6 +5,7 @@ version: 1.0.0
 date-released: 2026-11-12
 license: MIT
 repository-code: "https://github.com/SohelRana92/nist-round3-pqsig-eval"
+doi: 10.5281/zenodo.24144979
 authors:
   - family-names: Rana
     given-names: Sohel

@@ -16,7 +16,7 @@ The repository measures the eight NIST Round-3 additional signature candidates (
 
 One rule holds everywhere: **a build is never timed on a platform until it passes its known-answer test (KAT) on that platform.** `tools/run_bench.py`, `tools/run_batch.py` and `fpga/mb_run.py` enforce it.
 
-The full raw data (about 490 MB) is archived on Zenodo: DOI *to be added*. This repository holds the code and the summary results the paper's tables and figures are built from.
+The code and the full raw data (about 490 MB) are archived on Zenodo: [10.5281/zenodo.24144979](https://doi.org/10.5281/zenodo.24144979). The archived files are under embargo until 27 December 2026. This repository holds the code and the summary results the paper's tables and figures are built from.
 
 ## Layout
 
