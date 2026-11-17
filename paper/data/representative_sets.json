@@ -1,5 +1,5 @@
 {
- "note": "One Category 1 set per scheme for Tables V and VI; every other set goes to the supplementary CSV. On each platform the variant is the fastest submitted implementation that runs there (x86: GFNI for UOV and MAYO, AVX-512 for MQOM, measured). These are provisional choices made for the first draft so the tables compile; the authors confirm or change them after the Category 1 runs. 'variant' names the recipe variant per platform; 'default' applies where a platform is not listed. 'recipe_gpu' is the portable recipe run on the GPU (Table VIII); SQIsign has none (variable-length arrays).",
+ "note": "One Category 1 set per scheme, used in the cycle, memory, energy, batch and message-size tables. On each platform the variant is the fastest submitted implementation that runs there. 'variant' names the recipe variant per platform; 'default' applies where a platform is not listed. 'recipe_gpu' is the portable recipe run on the GPU; SQIsign has none (variable-length arrays).",
  "sets": {
   "FAEST": {
    "param": "faest_128s",

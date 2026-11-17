@@ -4,17 +4,16 @@
   python3 paper/scripts/make_tables.py
 
 Reads (paths relative to the repository root):
-  paper/data/table1_sizes_from_api.csv      pk/sk/sig bytes from each package's api.h
+  paper/data/sizes_from_api.csv      pk/sk/sig bytes from each package's api.h
   paper/data/representative_sets.json       which Category 1 set represents each scheme
   results/summary_speed.csv                 tools/summarize.py
   results/summary_stack.csv, summary_code.csv
   results/energy_summary.csv                energy/energy_analyze.py, energy/rapl_analyze.py
-  results/feasibility.csv                   filled by hand from board logs
+  results/feasibility.csv                   tools/esp32_feasibility.py, tools/gpu_feasibility.py
   results/ct_<platform>.csv                 ct/run_ct.sh
 
-Writes paper/tables/tab*.tex. A cell whose number does not exist yet is
-written as \\todo{...} naming the file it will come from, so the draft
-compiles and every missing number stays visible in red.
+Writes paper/tables/tab_*.tex. A missing value stops the script with an
+error that names the file it should come from.
 """
 import csv
 import json
@@ -49,10 +48,9 @@ def esc(s):
     return s.replace("_", r"\_")
 
 
-def todo(src):
-    """A missing table cell: a red bullet in the draft, a build error with
-    \\draftfalse. The table caption names the file that fills it."""
-    return r"\tcell{%s}" % esc(src)
+def missing(src):
+    """A table cell without a value: stop and name the file that fills it."""
+    raise SystemExit("missing value in a table; check %s" % src)
 
 
 def read_csv(path):
@@ -88,33 +86,26 @@ def kfmt(x):
     return "%.2f" % v
 
 
-SRC = {
-    "tab4_feasibility.tex": "results/feasibility.csv",
-    "tab5_cycles.tex": "results/summary_speed.csv",
-    "tab6_memory_energy.tex": "results/summary_stack.csv, summary_code.csv, energy_summary.csv",
-    "tab7_ct.tex": "results/ct_pi5.csv, ct_x86.csv",
-    "tab8_batch.tex": "results/raw/x86/batch_*.csv and the GPU CSVs",
-}
 
 
-# Short captions (10-20 words) with the details moved to a note under the
-# table, as IEEE allows. write() swaps the long caption for these.
+# Captions and notes of the tables as printed in the paper. write() puts
+# these in place of the working captions below.
 CAPTIONS = {
-    "tab1_sizes.tex": (r"The eight Round-3 candidates and six baselines, with sizes in bytes for every Category~1 parameter set.",
+    "tab_sizes.tex": (r"The eight Round-3 candidates and six baselines, with sizes in bytes for every Category~1 parameter set.",
                        r"Sizes are read from each package's \texttt{api.h} through our framework \texttt{sizes} command."),
-    "tab4_feasibility.tex": (r"Which schemes run on each platform, with the limiting resource named when one does not.", ""),
-    "tab5_cycles.tex": (r"Median kilocycles for key generation, signing and verification in Category~1 on four CPU platforms.",
+    "tab_feasibility.tex": (r"Which schemes run on each platform, with the limiting resource named when one does not.", ""),
+    "tab_cycles.tex": (r"Median kilocycles for key generation, signing and verification in Category~1 on four CPU platforms.",
                         r"KG: key generation; S: signing; V: verification. ESP32 and MicroBlaze run portable C; the Pi~5 and the 9950X run the submitters' optimised code where it exists. 1{,}000 runs after 10 warm-up runs, or 100 when one operation takes more than 1~s. A dash marks a set that does not run (Table~\ref{tab:feasibility}). On the ESP32, SNOVA uses the memory-saving build."),
-    "tab6_memory_energy.tex": (r"Peak stack, code size and energy per signature for the representative set of each scheme.",
-                               r"Stack: bytes above the stack of an empty run. Code: \texttt{.text} bytes of the scheme library built for the MicroBlaze (MB) from the portable C that runs on the ESP32; the FAEST library holds all four parameter sets. Energy in $\mu$J. MicroBlaze$^{*}$: Vivado estimate, 0.884~W on-chip power (vectorless, confidence ``Low'') times the median signing time. Pi~5: PMIC rails, ten 15~s windows above the session idle level of 3.33~W. 9950X: RAPL package, five 10~s windows above the session idle level. Confidence intervals are in the data archive. ESP32 energy is left to future work."),
-    "tab7_ct.tex": (r"Constant-time test results for signing on the Ryzen~9 9950X, with one row per tested build.",
-                    r"$|t|$: largest Welch statistic of the fixed-versus-random test. Control: both classes sign with the same key. Confirm: a second run with a new seed. Leak: $|t|>4.5$ in both runs with the control below 4.5; inconclusive: control above 4.5; not repeated: only the first run above 4.5. Memcheck: reports with the secret key marked undefined, capped at 1{,}000; n/a: Valgrind~3.22 cannot decode GFNI or AVX-512. $^{\dagger}$Key copied into a random slot before every measurement."),
-    "tab7b_ct_pi5.tex": (r"Constant-time test results for signing on the Raspberry Pi~5, under the same rules as Table~\ref{tab:ct}.",
-                         r"Three tests run in parallel on cores 1 to 3. A one-hour budget per test sets $n$, so slow signers get fewer measurements than on the 9950X. Valgrind~3.22 decodes the NEON code. $^{\dagger}$Key copied into a random slot before every measurement."),
-    "tab8_batch.tex": (r"Batch verification throughput on the 9950X and the RTX~5070~Ti, and where the GPU overtakes the CPU.",
+    "tab_memory_energy.tex": (r"Peak stack, code size and energy per signature for the representative set of each scheme.",
+                               r"Stack and code (MB: MicroBlaze) in bytes. $^{\mathrm{a}}$Vivado estimate, not a measurement."),
+    "tab_ct_x86.tex": (r"Constant-time test results for signing on the Ryzen~9 9950X, with one row per tested build.",
+                    r"$|t|$: largest Welch statistic of the fixed-versus-random test. Control: both classes sign with the same key. Confirm: a second run with a new seed. Leak: $|t|>4.5$ in both runs with the control below 4.5; inconclusive: control above 4.5; not repeated: only the first run above 4.5. Memcheck: reports with the secret key marked undefined, capped at 1{,}000; n/a: Valgrind~3.22 cannot decode GFNI or AVX-512. $^{\mathrm{a}}$Key copied into a random slot before every measurement."),
+    "tab_ct_pi5.tex": (r"Constant-time test results for signing on the Raspberry Pi~5, under the same rules as Table~\ref{tab:ct}.",
+                         r"Three tests run in parallel on cores 1 to 3. A one-hour budget per test sets $n$, so slow signers get fewer measurements than on the 9950X. Valgrind~3.22 decodes the NEON code. $^{\mathrm{a}}$Key copied into a random slot before every measurement."),
+    "tab_batch.tex": (r"Batch verification throughput on the 9950X and the RTX~5070~Ti, and where the GPU overtakes the CPU.",
                        r"Verifications per second, shared-key mode. CPU: 32 threads, recipe of Table~\ref{tab:cycles}. GPU: portable recipe, one thread per signature, end to end with copies. Cross.: smallest batch at which the GPU is faster. A dash marks no correct GPU result (Table~\ref{tab:feasibility}); t/o: one run would exceed 40 minutes. SNOVA uses SNOVA\_I\_K with AES on the GPU, because the SHAKE versions reject every valid signature there."),
-    "tab9_message.tex": (r"Frames per signed 64-byte reading on three IoT links, and the size of a three-certificate chain.",
-                         r"802.15.4: 127-byte frames, 9-byte MAC header and 2-byte FCS, 6LoWPAN with uncompressed IPv6 and UDP headers and RFC~4944 fragmentation~\cite{ieee802154,rfc4944}. BLE: 251-byte LL payload with an L2CAP credit-based channel~\cite{btcore}. IPv6: 1{,}280-byte MTU with IPv6 fragmentation~\cite{rfc8200}. Chain: X.509 structure measured from an OpenSSL Ed25519 chain with key and signature replaced; $^{m}$ marks chains measured directly."),
+    "tab_message.tex": (r"Frames per signed 64-byte reading on three IoT links, and the size of a three-certificate chain.",
+                         r"$^{\mathrm{a}}$Chain measured directly; the other chains are computed."),
 }
 
 
@@ -130,7 +121,7 @@ def _swap_caption(body, short, note):
     if note:
         k = body.rfind("\\end{tabular}")
         k = body.find("\n", k) + 1
-        body = body[:k] + "\\par\\vspace{2pt}{\\footnotesize\\raggedright " + note + "\\par}\n" + body[k:]
+        body = body[:k] + "\\footnotetext{" + note + "}\n" + body[k:]
     return body
 
 
@@ -138,15 +129,12 @@ def write(name, body):
     os.makedirs(OUT, exist_ok=True)
     if name in CAPTIONS:
         body = _swap_caption(body, *CAPTIONS[name])
-    if r"\tcell" in body and name in SRC:
-        note = "\\ifdraft{\\color{red}\\scriptsize red bullets: values still to come from %s}\\par\\fi\n" % esc(SRC[name])
-        body = body.replace("\\centering\n", "\\centering\n" + note, 1)
     with open(os.path.join(OUT, name), "w") as f:
         f.write(body)
 
 
 def table1():
-    rows = read_csv("paper/data/table1_sizes_from_api.csv")
+    rows = read_csv("paper/data/sizes_from_api.csv")
     by = {}
     for r in rows:
         by.setdefault(r["scheme"], []).append(r)
@@ -162,11 +150,11 @@ def table1():
                 "{:,}".format(int(r["sig_bytes"]))))
             first = False
         if not rs:
-            lines.append("%s & %s & %s & %s & & & \\\\" % (s, fam, hard, todo("api.h")))
+            lines.append("%s & %s & %s & %s & & & \\\\" % (s, fam, hard, missing("api.h")))
         lines.append(r"\midrule")
     if lines and lines[-1] == r"\midrule":
         lines.pop()
-    write("tab1_sizes.tex", r"""\begin{table*}[!t]
+    write("tab_sizes.tex", r"""\begin{table}[!htbp]
 \caption{The eight Round-3 candidates and six baselines with every Category~1 parameter set. Sizes in bytes, read from each package's \texttt{api.h} through our framework \texttt{sizes} command.}
 \label{tab:sizes}
 \centering
@@ -178,7 +166,7 @@ Scheme & Family & Hardness basis & Parameter set & pk & sk & sig \\
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
 
 
@@ -224,11 +212,11 @@ def table5():
                 elif (s, e["param"], var) in nr[plat] or (s == "SDitH" and plat in ("esp32", "microblaze")):
                     cells.append(DASH)
                 else:
-                    cells.append(todo("speed"))
+                    cells.append(missing("speed"))
         lines.append("%s & %s & %s \\\\" % (s, esc(e["param"]), " & ".join(cells)))
     head = " & ".join(r"\multicolumn{3}{c}{%s}" % n for _, n in CPU_PLATS)
     cm = " ".join(r"\cmidrule(lr){%d-%d}" % (3 + 3 * i, 5 + 3 * i) for i in range(len(CPU_PLATS)))
-    write("tab5_cycles.tex", r"""\begin{table*}[!t]
+    write("tab_cycles.tex", r"""\begin{table}[!htbp]
 \caption{Median kilocycles for key generation (KG), signing (S) and verification (V), Category~1. Portable reference C on ESP32 and MicroBlaze; the submitters' optimised code on the Pi~5 and the 9950X where it exists, reference C otherwise. 1{,}000 runs after 10 warm-up runs, or 100 runs when one operation takes more than 1~s. A dash marks a set that does not run on that platform (Table~\ref{tab:feasibility}). On the ESP32, SNOVA uses the submitters' memory-saving variant.}
 \label{tab:cycles}
 \centering
@@ -243,7 +231,7 @@ Scheme & Set & """ + " & ".join(["KG & S & V"] * len(CPU_PLATS)) + r""" \\
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
 
 
@@ -272,7 +260,7 @@ def table6():
                 elif (s, e["param"], var) in nr[plat] or (s == "SDitH" and plat == "esp32"):
                     cells.append(DASH)
                 else:
-                    cells.append(todo("stack"))
+                    cells.append(missing("stack"))
         # code size: .text of the scheme library built for the MicroBlaze
         # (the same portable C as on the ESP32), results/code_microblaze.csv
         mbsize = {r[0]: int(r[1]) for r in csv.reader(open(os.path.join(ROOT, "results", "code_microblaze.csv"))) if len(r) >= 2}
@@ -283,7 +271,7 @@ def table6():
         elif s == "SDitH":
             cells.append(DASH)
         else:
-            cells.append(todo("size"))
+            cells.append(missing("size"))
         for plat in ("microblaze:vivado", "pi5", "x86:rapl_pkg"):
             pl = plat.split(":")[0]
             var = e["variant"].get(pl, e["variant"].get("default"))
@@ -294,10 +282,10 @@ def table6():
             elif pl == "microblaze" and (s == "SDitH" or (s, e["param"], var) in no_run("microblaze")):
                 cells.append(DASH)
             else:
-                cells.append(todo("energy"))
+                cells.append(missing("energy"))
         lines.append("%s & %s & %s \\\\" % (s, esc(e["param"]), " & ".join(cells)))
-    write("tab6_memory_energy.tex", r"""\begin{table*}[!t]
-\caption{Peak stack above the harness baseline (bytes), code size (bytes, \texttt{.text} of the scheme library built for the MicroBlaze (MB) from the same portable C that runs on the ESP32; the FAEST library holds all four parameter sets) and energy per signing operation ($\mu$J). MicroBlaze$^{*}$: estimate, total on-chip power from the Vivado power report (0.884~W, vectorless, confidence ``Low'') times the median signing time. Pi~5: measured from the PMIC rails (\texttt{vcgencmd pmic\_read\_adc}, 42 readings per second), mean of ten 15~s windows above the session idle level (3.33~W); it excludes the 5~V input and the PMIC's own conversion loss. 9950X: RAPL package energy, mean of five 10~s windows above the session idle level. The 95\% confidence intervals are in the data archive. Energy on the ESP32 is left to future work.}
+    write("tab_memory_energy.tex", r"""\begin{table}[!htbp]
+\caption{Peak stack above an empty run (bytes), code size (bytes, \texttt{.text} of the scheme library built for the MicroBlaze (MB) from the same portable C that runs on the ESP32; the FAEST library holds all four parameter sets) and energy per signing operation ($\mu$J). MicroBlaze$^{\mathrm{a}}$: estimate, total on-chip power from the Vivado power report (0.884~W, vectorless, confidence ``Low'') times the median signing time. Pi~5: measured from the PMIC rails (\texttt{vcgencmd pmic\_read\_adc}, 42 readings per second), mean of ten 15~s windows above the session idle level (3.33~W); it excludes the 5~V input and the PMIC's own conversion loss. 9950X: RAPL package energy, mean of five 10~s windows above the session idle level. The 95\% confidence intervals are in the data archive. Energy on the ESP32 is left to future work.}
 \label{tab:memory}
 \centering
 \scriptsize
@@ -305,12 +293,12 @@ def table6():
 \toprule
  & & \multicolumn{2}{c}{Stack ESP32} & \multicolumn{2}{c}{Stack Pi 5} & Code & \multicolumn{3}{c}{Energy, signing ($\mu$J)} \\
 \cmidrule(lr){3-4}\cmidrule(lr){5-6}\cmidrule(lr){8-10}
-Scheme & Set & S & V & S & V & MB & MicroBlaze$^{*}$ & Pi 5 & 9950X \\
+Scheme & Set & S & V & S & V & MB & MicroBlaze$^{\mathrm{a}}$ & Pi 5 & 9950X \\
 \midrule
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
 
 
@@ -328,9 +316,9 @@ def table4():
             elif s == "SDitH" and p in ("esp32", "microblaze"):
                 cells.append(r"no build (\texttt{\_\_uint128\_t})")
             else:
-                cells.append(todo("feasibility"))
+                cells.append(missing("feasibility"))
         lines.append("%s & %s \\\\" % (s, " & ".join(cells)))
-    write("tab4_feasibility.tex", r"""\begin{table*}[!t]
+    write("tab_feasibility.tex", r"""\begin{table}[!htbp]
 \caption{Feasibility map. A cell names the limiting resource when a scheme does not run all three operations on a platform.}
 \label{tab:feasibility}
 \centering
@@ -342,7 +330,7 @@ Scheme & """ + " & ".join(n for _, n in plats) + r""" \\
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
 
 
@@ -374,13 +362,13 @@ def table7(platform="x86"):
         if c and float(c["max_abs_t"]) > 4.5:
             finding = "inconclusive"
         elif f and float(f["max_abs_t"]) > 4.5 and (cf is None or float(cf["max_abs_t"]) > 4.5):
-            finding = "leak" if cf else "leak$^{*}$"
+            finding = "leak" if cf else "leak (unconfirmed)"
         elif f and float(f["max_abs_t"]) > 4.5:
             finding = "not repeated"
         elif f:
             finding = "none"
         else:
-            finding = todo("ct")
+            finding = missing("ct")
         name = [n for n, v in recipes.items() if (v["scheme"], v["param"], v["variant"]) == k]
         site = sites.get(name[0]) if name else None
         mtxt = "--"
@@ -389,11 +377,11 @@ def table7(platform="x86"):
             mtxt = "0" if v == "no_report" else ("n/a" if v.startswith("not_run") else v.replace("reports_", "").replace("_contexts", ""))
         cls = esc(site["class"]) if site else "--"
         lines.append("%s & %s%s & %s & %s & %s & %s & %s & %s & %s \\\\" % (
-            esc(k[0]), esc(k[2]), "$^{\\dagger}$" if d.get("fresh") else "", f["n"] if f else "--",
+            esc(k[0]), esc(k[2]), "$^{\\mathrm{a}}$" if d.get("fresh") else "", f["n"] if f else "--",
             tv(f), tv(c), tv(cf), finding, mtxt, cls))
     if platform == "pi5":
-        write("tab7b_ct_pi5.tex", r"""\begin{table*}[!t]
-\caption{Constant-time tests on signing on the Raspberry Pi 5 (Cortex-A76, three cores in parallel), with the same tests and rules as Table~\ref{tab:ct}. The number of measurements $n$ is set by a one-hour budget per test, so the slow signers get fewer measurements than on the Ryzen. Memcheck: Valgrind 3.22 on AArch64, which decodes the NEON code. $^{\dagger}$Key copied into a random work slot before every measurement.}
+        write("tab_ct_pi5.tex", r"""\begin{table}[!htbp]
+\caption{Constant-time tests on signing on the Raspberry Pi 5 (Cortex-A76, three cores in parallel), with the same tests and rules as Table~\ref{tab:ct}. The number of measurements $n$ is set by a one-hour budget per test, so the slow signers get fewer measurements than on the Ryzen. Memcheck: Valgrind 3.22 on AArch64, which decodes the NEON code. $^{\mathrm{a}}$Key copied into a random work slot before every measurement.}
 \label{tab:ct_pi5}
 \centering
 \footnotesize
@@ -404,11 +392,11 @@ Scheme & Variant & $n$ & $|t|$ & control & confirm & result & memcheck & class \
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
         return
-    write("tab7_ct.tex", r"""\begin{table*}[!t]
-\caption{Constant-time tests on signing on the Ryzen 9 9950X. $|t|$: largest Welch statistic of the fixed-versus-random test; control: both classes sign with the same key (false-positive floor); confirm: a second run with fresh data. A result is a leak when $|t|>4.5$ in both runs and the control stays below 4.5, inconclusive when the control exceeds 4.5, and not repeated when only the first run exceeds 4.5. Memcheck: error contexts reported with the secret key marked undefined, capped at 1{,}000 (n/a: Valgrind 3.22 cannot decode GFNI or AVX-512 code); class: our reading of those sites. $^{\dagger}$Key copied into a random work slot before every measurement.}
+    write("tab_ct_x86.tex", r"""\begin{table}[!htbp]
+\caption{Constant-time tests on signing on the Ryzen 9 9950X. $|t|$: largest Welch statistic of the fixed-versus-random test; control: both classes sign with the same key (false-positive floor); confirm: a second run with fresh data. A result is a leak when $|t|>4.5$ in both runs and the control stays below 4.5, inconclusive when the control exceeds 4.5, and not repeated when only the first run exceeds 4.5. Memcheck: error contexts reported with the secret key marked undefined, capped at 1{,}000 (n/a: Valgrind 3.22 cannot decode GFNI or AVX-512 code); class: our reading of those sites. $^{\mathrm{a}}$Key copied into a random work slot before every measurement.}
 \label{tab:ct}
 \centering
 \footnotesize
@@ -419,7 +407,7 @@ Scheme & Variant & $n$ & $|t|$ & control & confirm & result & memcheck & class \
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
 
 
@@ -473,7 +461,7 @@ def table8():
         gpu_rec = e.get("recipe_gpu")
         cpu = batch_rates("results/raw/x86/batch_%s.csv" % cpu_rec, "cpu") if cpu_rec else {}
         gpu = batch_rates("results/raw/gpu/batch_%s.csv" % gpu_rec, "gpu") if gpu_rec else {}
-        cells = [rate_fmt(cpu[("shared", b)]) if ("shared", b) in cpu else todo("batch") for b in batches]
+        cells = [rate_fmt(cpu[("shared", b)]) if ("shared", b) in cpu else missing("batch") for b in batches]
         gpath = os.path.join(ROOT, "results", "raw", "gpu", "batch_%s.csv" % gpu_rec) if gpu_rec else ""
         gtext = open(gpath).read() if gpath and os.path.exists(gpath) else ""
         gdone = "GPU_DONE" in gtext
@@ -483,7 +471,7 @@ def table8():
                 return rate_fmt(gpu[("shared", b)])
             if b in skipped:
                 return "t/o"
-            return DASH if gdone else todo("gpu")
+            return DASH if gdone else missing("gpu")
         if not gpu_rec:
             cells += [DASH] * 5
         else:
@@ -493,9 +481,9 @@ def table8():
         if cpu and gpu:
             cells.append("{:,}".format(cross) if cross else "none")
         else:
-            cells.append(DASH if (not gpu_rec or gdone) else todo("crossover"))
+            cells.append(DASH if (not gpu_rec or gdone) else missing("crossover"))
         lines.append("%s & %s \\\\" % (s, " & ".join(cells)))
-    write("tab8_batch.tex", r"""\begin{table*}[!t]
+    write("tab_batch.tex", r"""\begin{table}[!htbp]
 \caption{Verifications per second, shared-key mode, at batch sizes 1, 64, 1{,}024, 16{,}384 and 65{,}536 on the 9950X with 32 threads (recipe of Table~\ref{tab:cycles}) and on the RTX~5070~Ti (portable recipe, one thread per signature, end to end including copies), and the smallest batch at which the GPU is faster. A dash marks a scheme or batch without a correct GPU result (Table~\ref{tab:feasibility} gives the reason); t/o marks a batch size skipped because one run would exceed 40 minutes. SNOVA on the GPU uses the AES version of SNOVA\_I\_K, because the SHAKE versions reject every valid signature there.}
 \label{tab:batch}
 \centering
@@ -510,12 +498,12 @@ Scheme & 1 & 64 & 1k & 16k & 64k & 1 & 64 & 1k & 16k & 64k & Cross. \\
 """ + "\n".join(lines) + r"""
 \bottomrule
 \end{tabular}
-\end{table*}
+\end{table}
 """)
 
 
 def table9():
-    rows = read_csv("paper/data/table_ix.csv")
+    rows = read_csv("paper/data/message_cost.csv")
     rep = representative()
     by = {(r["scheme"], r["param"]): r for r in rows}
     lines = []
@@ -523,13 +511,13 @@ def table9():
         e = rep["sets"].get(s)
         r = by.get((s, e["param"])) if e else None
         if not r:
-            lines.append("%s & %s \\\\" % (s, " & ".join([todo("table_ix.py")] * 5)))
+            lines.append("%s & %s \\\\" % (s, " & ".join([missing("message_cost.py")] * 5)))
             continue
         lines.append("%s & %s & %s & %s & %s & %s \\\\" % (
             s, esc(r["param"]), r["frames_154"], r["frames_ble"], r["frames_ipv6"],
-            "{:,}".format(int(r["chain_bytes"])) + ("" if r["chain_method"] == "modelled" else "$^{m}$")))
-    write("tab9_message.tex", r"""\begin{table}[!t]
-\caption{Frames needed for one signed 64-byte reading and bytes of a three-certificate chain. 802.15.4: 127-byte frames, 9-byte MAC header and 2-byte FCS, 6LoWPAN with uncompressed IPv6 and UDP headers and RFC~4944 fragmentation~\cite{ieee802154,rfc4944}. BLE: 251-byte LL payload with an L2CAP credit-based channel~\cite{btcore}. IPv6: 1{,}280-byte MTU with IPv6 fragmentation~\cite{rfc8200}. Chain bytes: X.509 structure measured from an OpenSSL Ed25519 chain, key and signature replaced, NIST-arc OIDs; $^{m}$ marks chains measured directly.}
+            "{:,}".format(int(r["chain_bytes"])) + ("" if r["chain_method"] == "modelled" else "$^{\\mathrm{a}}$")))
+    write("tab_message.tex", r"""\begin{table}[!t]
+\caption{Frames needed for one signed 64-byte reading and bytes of a three-certificate chain. 802.15.4: 127-byte frames, 9-byte MAC header and 2-byte FCS, 6LoWPAN with uncompressed IPv6 and UDP headers and RFC~4944 fragmentation~\cite{ieee802154,rfc4944}. BLE: 251-byte LL payload with an L2CAP credit-based channel~\cite{btcore}. IPv6: 1{,}280-byte MTU with IPv6 fragmentation~\cite{rfc8200}. Chain bytes: X.509 structure measured from an OpenSSL Ed25519 chain, key and signature replaced, NIST-arc OIDs; $^{\mathrm{a}}$ marks chains measured directly.}
 \label{tab:message}
 \centering
 \footnotesize

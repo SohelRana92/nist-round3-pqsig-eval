@@ -1,5 +1,5 @@
 scheme,param,pk,sig,frames_154,bytes_154,frames_ble,bytes_ble,frames_ipv6,bytes_ipv6,chain_bytes,chain_method
-ECDSA,P-256,64,64,2,208,1,134,1,176,1170,measured
+ECDSA,P-256,64,64,2,208,1,134,1,176,1169,measured
 Ed25519,Ed25519,32,64,2,208,1,134,1,176,975,measured
 FAEST,faest_128f,32,5170,51,6098,22,5324,5,5482,16354,modelled
 FAEST,faest_128s,32,4066,41,4834,17,4200,4,4330,13042,modelled

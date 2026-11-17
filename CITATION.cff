@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this code or data, please cite it as below."
-title: "nist-round3-pqsig-eval: code and data for the evaluation of the eight NIST Round-3 post-quantum signature candidates across the IoT hierarchy"
+title: "nist-round3-pqsig-eval: code and data for the evaluation of the NIST Round-3 additional post-quantum signature candidates across the IoT hierarchy"
 version: 1.0.0
 date-released: 2026-11-12
 license: MIT

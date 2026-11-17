@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
-"""figs.py - Figs. 3 to 5 of the paper as vector PDF from the CSV files.
+"""figs.py - Figs. 3, 4 and 5 of the paper as vector PDF files.
 
-  python3 paper/scripts/figs.py
+  python3 paper/scripts/figs.py  ->  paper/figures/Fig3, Fig4, Fig5 as .pdf and .png (600 dpi)
 
-Fig. 3  results/summary_speed.csv   signing and verification median cycles,
-                                    log scale, one panel per CPU platform
-Fig. 4  results/energy_summary.csv  energy per signing and verification with
-                                    95% confidence intervals
-Fig. 5  results/raw/x86/batch_*.csv and results/raw/gpu/batch_*.csv
-                                    verifications per second against batch
-                                    size, log-log, one panel per scheme
+Fig. 3  results/summary_speed.csv: median signing and verification cycles,
+        log scale, one panel per CPU platform.
+Fig. 4  results/energy_*.csv: energy per signing and verification on three
+        platforms, one row per scheme, log scale.
+Fig. 5  results/raw/x86/batch_*.csv and results/raw/gpu/batch_*.csv:
+        verifications per second against batch size, log-log axes.
 
-A figure whose input is missing is skipped with a message; the LaTeX
-source then shows a framed TODO box in its place.
-
-Colours: categorical slots 1-3 of the dataviz reference palette (blue,
-orange, aqua), validated as a set; every series also carries a distinct
-marker and hatch so the figures survive greyscale print.
+Figures are drawn at the 5.15 in text width of the journal template, with all
+text at 8 pt. Each series has its own colour and marker, so the figures also
+read in greyscale.
 """
 import csv
 import glob
@@ -29,6 +25,7 @@ import matplotlib.pyplot as plt  # noqa: E402
 
 ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 OUT = os.path.join(ROOT, "paper", "figures")
+DPI = 600   # resolution of the PNG copies
 C = ["#2a78d6", "#eb6834", "#1baf7a"]
 MARK = ["o", "s", "^"]
 HATCH = ["", "////", "...."]
@@ -42,6 +39,13 @@ plt.rcParams.update({
     "xtick.color": INK2, "ytick.color": INK2, "axes.linewidth": 0.6, "pdf.fonttype": 42,
     "axes.spines.top": False, "axes.spines.right": False, "legend.frameon": False,
 })
+
+def save_png(fig, path):
+    """PNG copy at DPI, saved as plain RGB on white (no transparency)."""
+    from PIL import Image
+    fig.savefig(path, dpi=DPI, facecolor="white")
+    Image.open(path).convert("RGB").save(path, dpi=(DPI, DPI))
+
 
 
 def rep_sets():
@@ -80,7 +84,8 @@ def fig3():
     rep = rep_sets()
     idx = {(r["scheme"], r["param"], r["variant"], r["platform"], r["op"]): float(r["median_cycles"])
            for r in sp if r["all_ok"] == "1"}
-    fig, axes = plt.subplots(len(CPU), 1, figsize=(3.5, 1.35 * len(CPU)), sharex=True)
+    fig, grid = plt.subplots(2, 2, figsize=(5.15, 4.3), sharex=True)
+    axes = list(grid.flat)
     for i, (ax, (plat, name)) in enumerate(zip(axes, CPU)):
         xs = range(len(SCHEMES))
         for k, op in enumerate(("sign", "verify")):
@@ -93,16 +98,19 @@ def fig3():
                    width=0.36, color=C[k], hatch=HATCH[k], edgecolor="white", linewidth=0.4,
                    label="signing" if op == "sign" else "verification")
         ax.set_yscale("log")
-        ax.set_ylabel("cycles")
+        if i % 2 == 0:
+            ax.set_ylabel("cycles")
         ax.set_title("(%s) %s" % ("abcd"[i], name), fontsize=8, loc="left", color=INK)
         ax.grid(axis="y", color=GRID, linewidth=0.4)
         ax.set_axisbelow(True)
-    axes[-1].set_xticks(range(len(SCHEMES)))
-    axes[-1].set_xticklabels(SCHEMES, rotation=60, ha="right")
+    for ax in axes[2:]:
+        ax.set_xticks(range(len(SCHEMES)))
+        ax.set_xticklabels(SCHEMES, rotation=60, ha="right")
     h, l = axes[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=2, fontsize=8)
-    fig.tight_layout(h_pad=0.4, rect=(0, 0, 1, 0.97))
-    fig.savefig(os.path.join(OUT, "fig3_cycles.pdf"))
+    fig.tight_layout(h_pad=0.6, w_pad=0.8, rect=(0, 0, 1, 0.95))
+    fig.savefig(os.path.join(OUT, "Fig3.pdf"))
+    save_png(fig, os.path.join(OUT, "Fig3.png"))
     print("fig3 written")
 
 
@@ -120,7 +128,7 @@ def ratio_fmt(r):
     return "%.1fM" % (r / 1e6)
 
 
-def fig4(joined=False, out_name="fig4_energy.pdf"):
+def fig4(joined=False, out_name="Fig4.pdf"):
     """Energy per operation on three platforms, one row per scheme, log scale:
     (a) signing, (b) verification. A grey bar spans the platforms of each
     scheme; rows are ordered by Pi 5 signing energy; the ML-DSA-44 row is
@@ -138,11 +146,11 @@ def fig4(joined=False, out_name="fig4_energy.pdf"):
         pl = plat.split(":")[0]
         return idx.get((s, e["param"], e["variant"].get(pl, e["variant"].get("default")), plat, op))
 
-    plats = [("microblaze:vivado", "MicroBlaze (Vivado estimate)", "o", "#0072B2"),
+    plats = [("microblaze:vivado", "MicroBlaze (estimate)", "o", "#0072B2"),
              ("pi5", "Raspberry Pi 5 (PMIC)", "s", "#D55E00"),
              ("x86:rapl_pkg", "Ryzen 9 9950X (RAPL)", "^", "#009E73")]
     order = sorted(SCHEMES, key=lambda s: E(s, "pi5", "sign") or 0)
-    fig, axes = plt.subplots(1, 2, figsize=(7.16, 3.1), sharey=True)
+    fig, axes = plt.subplots(1, 2, figsize=(5.15, 3.5), sharey=True)
     for ax, op, title in zip(axes, ("sign", "verify"), ("(a) Signing", "(b) Verification")):
         r_ml = order.index("ML-DSA")
         ax.axhspan(r_ml - 0.45, r_ml + 0.45, color="#f1efe9", zorder=0)
@@ -169,13 +177,14 @@ def fig4(joined=False, out_name="fig4_energy.pdf"):
         t.set_color(INK if s in SCHEMES[:8] else INK2)
     h, l = axes[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=3, fontsize=8, handletextpad=0.3)
-    fig.tight_layout(rect=(0, 0, 1, 0.93), w_pad=1.5)
+    fig.tight_layout(rect=(0, 0, 1, 0.92), w_pad=1.0)
     fig.savefig(os.path.join(OUT, out_name))
+    save_png(fig, os.path.join(OUT, out_name.replace(".pdf", ".png")))
     print("fig4 written", out_name)
 
 
 def batch_rates(path, device):
-    """{batch: verifies/s}, shared-key mode, as in the batch table (make_tables.py):
+    """{batch: verifies/s}, shared-key mode, as in Table VIII (make_tables.py):
     CPU from the BATCH rows; GPU end to end, kernel median plus the
     host-device copies of the GPU_XFER row. Repetitions with all_ok=0 dropped."""
     full = os.path.join(ROOT, path)
@@ -220,9 +229,11 @@ def fig5():
     if not any(c for _, c, _, _ in series):
         print("fig5: no CPU batch files; skipped")
         return
-    fig = plt.figure(figsize=(7.16, 2.9))
-    a0 = fig.add_subplot(1, 3, 1)
-    axes = [a0, fig.add_subplot(1, 3, 2, sharey=a0), fig.add_subplot(1, 3, 3)]
+    fig = plt.figure(figsize=(5.15, 4.6))
+    a0 = fig.add_subplot(2, 2, 1)
+    axes = [a0, fig.add_subplot(2, 2, 2, sharey=a0), fig.add_subplot(2, 2, 3)]
+    lax = fig.add_subplot(2, 2, 4)
+    lax.axis("off")
     titles = ["(a) CPU, 32 threads", "(b) GPU, RTX 5070 Ti", "(c) GPU / CPU ratio"]
     for s, cpu, gpu, sty in series:
         for ax, d in ((axes[0], cpu), (axes[1], gpu)):
@@ -245,9 +256,10 @@ def fig5():
     axes[2].axhline(1.0, color=INK, lw=0.8, ls=":")
     axes[2].text(1.3, 1.15, "GPU faster above", fontsize=8, color=INK2, va="bottom")
     h, l = axes[0].get_legend_handles_labels()
-    fig.legend(h, l, loc="lower center", ncol=7, fontsize=8, handlelength=2.6, columnspacing=1.0)
-    fig.tight_layout(rect=(0, 0.17, 1, 1), w_pad=1.0)
-    fig.savefig(os.path.join(OUT, "fig5_batch.pdf"))
+    lax.legend(h, l, loc="center", ncol=2, fontsize=8, handlelength=2.6, columnspacing=1.2, frameon=False)
+    fig.tight_layout(h_pad=1.0, w_pad=1.0)
+    fig.savefig(os.path.join(OUT, "Fig5.pdf"))
+    save_png(fig, os.path.join(OUT, "Fig5.png"))
     print("fig5 written")
 
 

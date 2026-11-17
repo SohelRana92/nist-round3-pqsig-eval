@@ -39,11 +39,11 @@ UOV,pi5,runs,
 UOV,x86,runs,
 ECDSA,esp32,runs,
 Ed25519,esp32,runs,
-FAEST,esp32,1 of 4 builds,heap
+FAEST,esp32,1 of 4 sets,heap
 FN-DSA,esp32,runs,
 MAYO,esp32,no run,stack
 ML-DSA,esp32,runs,
-MQOM,esp32,"key generation only, 4 of 6 builds",heap
+MQOM,esp32,"key generation only, 4 of 6 sets",heap
 QR-UOV,esp32,16 of 20 builds,stack
 SLH-DSA,esp32,runs,
 SNOVA,esp32,12 of 24 builds,stack

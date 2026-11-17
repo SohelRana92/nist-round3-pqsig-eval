@@ -2,7 +2,7 @@
 
 Code and data for the paper
 
-> **From Sensor Node to GPU Server: Speed, Energy and Timing Leakage of the Eight NIST Round-3 Post-Quantum Signatures Across the IoT Hierarchy**
+> **From Sensor Node to GPU Server: Speed, Energy and Timing Leakage of the NIST Round-3 Additional Post-Quantum Signatures Across the IoT Hierarchy**
 > Sohel Rana and M. Rubaiyat Hossain Mondal.
 
 The repository measures the eight NIST Round-3 additional signature candidates (FAEST, MQOM, SDitH, UOV, MAYO, QR-UOV, SNOVA, SQIsign) and six deployed baselines (ML-DSA-44, FN-DSA-512, SLH-DSA-SHA2-128s and -128f, Ed25519, ECDSA P-256) on five platforms:
@@ -16,7 +16,7 @@ The repository measures the eight NIST Round-3 additional signature candidates (
 
 One rule holds everywhere: **a build is never timed on a platform until it passes its known-answer test (KAT) on that platform.** `tools/run_bench.py`, `tools/run_batch.py` and `fpga/mb_run.py` enforce it.
 
-The code and the full raw data (about 490 MB) are archived on Zenodo: [10.5281/zenodo.24144979](https://doi.org/10.5281/zenodo.24144979). The archived files are under embargo until 27 December 2026. This repository holds the code and the summary results the paper's tables and figures are built from.
+The code and the full raw data (about 490 MB) are archived on Zenodo: [10.5281/zenodo.24144979](https://doi.org/10.5281/zenodo.24144979). The archived files are under embargo until 27 December 2027. This repository holds the code and the summary results the paper's tables and figures are built from.
 
 ## Layout
 
@@ -134,13 +134,12 @@ Every runner skips what is already finished, so a run can be restarted after an 
 ## 4. Regenerate the tables and figures
 
 ```sh
-python3 paper/scripts/make_tables.py   # paper/tables/*.tex
-python3 paper/scripts/table_ix.py      # message-size table
-python3 paper/scripts/figs.py          # paper/figures/fig3_cycles.pdf, fig4_energy.pdf, fig5_batch.pdf
-python3 paper/scripts/fig_hierarchy.py # paper/figures/fig0_hierarchy.pdf
+python3 paper/scripts/message_cost.py  # frames per signed reading and certificate-chain bytes
+python3 paper/scripts/make_tables.py   # paper/tables/tab_*.tex
+python3 paper/scripts/figs.py          # paper/figures/Fig3, Fig4, Fig5 (.pdf and .png)
 ```
 
-With the files in `results/` these scripts reproduce the paper's tables exactly.
+With the files in `results/`, these scripts reproduce every value in the paper's tables and in Figs. 3 to 5. Figs. 1 and 2 are diagrams and use no measured data.
 
 ## Licence
 

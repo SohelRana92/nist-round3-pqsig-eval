@@ -52,10 +52,10 @@ def rebuild_batch(platform, names, jobs):
     program signs the 65,536-signature inputs on one core, which takes
     hours for the slow signers; the new one signs them on every thread."""
     from concurrent.futures import ThreadPoolExecutor
-    todo = [n for n in names if not os.path.exists(os.path.join(TOP, "build", platform, n, "batch_tls.ok"))]
-    if not todo:
+    pending = [n for n in names if not os.path.exists(os.path.join(TOP, "build", platform, n, "batch_tls.ok"))]
+    if not pending:
         return
-    print("rebuilding %d recipes for the threaded batch setup (%d at a time)" % (len(todo), jobs), flush=True)
+    print("rebuilding %d recipes for the threaded batch setup (%d at a time)" % (len(pending), jobs), flush=True)
 
     def one(n):
         r = subprocess.run([sys.executable, os.path.join(HERE, "hbuild.py"), "--recipe", n, "--platform", platform],
@@ -65,7 +65,7 @@ def rebuild_batch(platform, names, jobs):
               flush=True)
 
     with ThreadPoolExecutor(max_workers=jobs) as ex:
-        list(ex.map(one, todo))
+        list(ex.map(one, pending))
 
 
 def main():

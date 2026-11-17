@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""table_ix.py - message-size cost (RQ5, the message-size table).
+"""message_cost.py - message-size cost (RQ5, the message-size table).
 
-  python3 paper/scripts/table_ix.py
+  python3 paper/scripts/message_cost.py
 
-Input : paper/data/table1_sizes_from_api.csv (pk and signature bytes)
-Output: paper/data/table_ix.csv and paper/tables/tab9_message.tex
+Input : paper/data/sizes_from_api.csv (pk and signature bytes)
+Output: paper/data/message_cost.csv and paper/tables/tab_message.tex
 
 Part 1, frames per signed 64-byte reading. The application payload is the
 64-byte reading followed by the signature. Each link model below is fixed
@@ -159,7 +159,7 @@ def model_cert(ed_size, pk, sig, oid_growth=6):
 
 
 def main():
-    sizes = list(csv.DictReader(open(os.path.join(ROOT, "paper", "data", "table1_sizes_from_api.csv"))))
+    sizes = list(csv.DictReader(open(os.path.join(ROOT, "paper", "data", "sizes_from_api.csv"))))
     ed = openssl_chain("ed25519")
     ec = openssl_chain("p256")
     rows = []
@@ -179,7 +179,7 @@ def main():
             chain = sum(model_cert(e, pk, sig) for e in ed)
             how = "modelled"
         rows.append([r["scheme"], r["param"], pk, sig, f1, b1, f2, b2, f3, b3, chain, how])
-    out = os.path.join(ROOT, "paper", "data", "table_ix.csv")
+    out = os.path.join(ROOT, "paper", "data", "message_cost.csv")
     with open(out, "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["scheme", "param", "pk", "sig", "frames_154", "bytes_154", "frames_ble", "bytes_ble",

@@ -1,4 +1,4 @@
-recipe,memcheck_contexts_pc1,main_sites,class,reason
+recipe,memcheck_contexts_x86,main_sites,class,reason
 ed25519-ref,0,-,none,no report
 ecdsa-p256-ref,16,uECC_vli_mmod; muladd; vli_numDigits/numBits,secret-dependent,micro-ecc modular arithmetic branches and indexes on secret scalars
 mldsa-44-ref,9,rej_uniform; poly_challenge; chknorm; make_hint; pack_sig,public-by-design,rejection decisions and values that the signature reveals; rho is public but stored in sk
